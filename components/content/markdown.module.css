@@ -1,0 +1,53 @@
+.markdown {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+.markdown > * + * {
+  margin-top: 1.35em;
+}
+
+.markdown h2,
+.markdown h3 {
+  margin-top: 2.2em;
+  color: var(--color-text);
+}
+
+.markdown h2 {
+  font-size: 2rem;
+}
+
+.markdown h3 {
+  font-size: 1.35rem;
+}
+
+.markdown strong {
+  color: var(--color-text);
+}
+
+.markdown a {
+  color: var(--color-accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.markdown blockquote {
+  padding: var(--space-4) var(--space-5);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-accent);
+}
+
+.markdown ul,
+.markdown ol {
+  padding-left: 1.4rem;
+}
+
+.markdown li + li {
+  margin-top: var(--space-2);
+}
+
+.markdown hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+}

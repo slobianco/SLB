@@ -1,0 +1,88 @@
+.trackHeader {
+  padding-block: var(--space-7) var(--space-8);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.backLink:hover {
+  color: var(--color-accent-strong);
+}
+
+.backLink svg {
+  width: 1rem;
+}
+
+.headerMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.headerMeta > span {
+  color: var(--color-accent-strong);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.trackHeader h1 {
+  max-width: 58rem;
+  margin-top: var(--space-4);
+  font-size: 4.2rem;
+}
+
+.trackHeader > div > p {
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.trackBody {
+  padding-block: var(--space-9) var(--space-10);
+}
+
+.trackGrid {
+  display: grid;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.trackGrid article > h2 {
+  margin-bottom: var(--space-6);
+  font-size: 2rem;
+}
+
+.lyrics {
+  max-width: 42rem;
+}
+
+.trackGrid aside {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-5));
+}
+
+@media (min-width: 54rem) {
+  .trackHeader h1 {
+    font-size: 6.5rem;
+  }
+
+  .trackGrid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(19rem, 0.9fr);
+  }
+}
+
+@media (max-width: 53.99rem) {
+  .trackGrid aside {
+    position: relative;
+    top: auto;
+  }
+}

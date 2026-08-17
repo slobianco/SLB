@@ -1,0 +1,188 @@
+{
+  "Navigation": {
+    "skip": "Skip to content",
+    "home": "Home",
+    "biography": "Story",
+    "album": "Music",
+    "tour": "Tour",
+    "merch": "Merch",
+    "news": "News",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primaryLabel": "Primary navigation"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Cielo Rojo — Official Site",
+      "description": "Enter the world of Cielo Rojo: music, lyrics, tour dates, stories, and official goods."
+    },
+    "biography": {
+      "title": "The Story",
+      "description": "Read the story behind Cielo Rojo and the solo process that shaped the debut album."
+    },
+    "album": {
+      "title": "Album and Lyrics",
+      "description": "Explore the ten-track Cielo Rojo concept album and read bilingual lyrics."
+    },
+    "tour": {
+      "title": "Tour",
+      "description": "See upcoming and past Cielo Rojo live dates."
+    },
+    "merch": {
+      "title": "Official Merch",
+      "description": "Preview the Cielo Rojo apparel, vinyl, and art collection."
+    },
+    "news": {
+      "title": "News",
+      "description": "Release updates, tour announcements, and studio stories from Cielo Rojo."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact Cielo Rojo for press, booking, licensing, and collaborations."
+    },
+    "designSystem": {
+      "title": "Design System",
+      "description": "Internal visual reference for the Cielo Rojo website."
+    }
+  },
+  "Theme": {
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme"
+  },
+  "Language": {
+    "label": "Language",
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "Footer": {
+    "tagline": "Heavy music forged under a blood-red sky.",
+    "explore": "Explore",
+    "follow": "Follow",
+    "rights": "All rights reserved.",
+    "prototype": "Independent music. No algorithms in the room."
+  },
+  "Common": {
+    "listen": "Listen now",
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "details": "Details",
+    "buy": "View item",
+    "tickets": "Tickets",
+    "comingSoon": "Coming soon",
+    "onSale": "On sale",
+    "soldOut": "Sold out",
+    "past": "Past",
+    "back": "Back",
+    "placeholder": "Prototype content"
+  },
+  "Home": {
+    "eyebrow": "A new era begins",
+    "title": "Cielo Rojo",
+    "intro": "One voice. Every instrument. A decade of fire pressed into a single record.",
+    "primaryCta": "Enter the album",
+    "secondaryCta": "See tour dates",
+    "featuredEyebrow": "Featured track",
+    "featuredTitle": "The sky remembers everything",
+    "featuredBody": "The title track moves from a lone nylon-string pulse into a wall of guitars, tracing the moment fear becomes momentum.",
+    "newsEyebrow": "Transmission",
+    "newsTitle": "Latest from the studio",
+    "tourEyebrow": "Next ritual",
+    "tourTitle": "Live under the red sky",
+    "heroAlt": "Crowd facing a brightly lit concert stage",
+    "coverAlt": "Cielo Rojo album cover with a segmented red sun"
+  },
+  "Biography": {
+    "eyebrow": "The story",
+    "title": "Made alone. Built to be heard together.",
+    "intro": "Cielo Rojo is the sound of one musician refusing to leave any part of the vision unfinished.",
+    "factsTitle": "At a glance",
+    "origin": "Origin",
+    "originValue": "Guadalajara, Mexico",
+    "genre": "Sound",
+    "genreValue": "Progressive metal / Latin folk",
+    "format": "Format",
+    "formatValue": "Solo studio project",
+    "galleryTitle": "Inside the process",
+    "portraitAlt": "Vocalist performing beneath stage lights",
+    "studioAlt": "Musician working in a recording space",
+    "guitarAlt": "Close view of a guitar being played",
+    "liveAlt": "Live music performance under red light"
+  },
+  "Album": {
+    "eyebrow": "The debut album",
+    "title": "Ten songs. One passage through fire.",
+    "intro": "Cielo Rojo follows a path from first light through loss, collapse, and rebirth.",
+    "tracklist": "Tracklist",
+    "track": "Track",
+    "duration": "Time",
+    "lyrics": "Lyrics",
+    "openLyrics": "Read lyrics for {title}",
+    "playerTitle": "Listen",
+    "playerUnavailable": "The streaming player will arrive with the official master release.",
+    "concept": "Concept record",
+    "release": "Independent release",
+    "year": "2026",
+    "backToAlbum": "Back to the album",
+    "lyricsHeading": "Lyrics and track notes",
+    "coverAlt": "Cielo Rojo album cover",
+    "lyricsMetadataTitle": "{title} Lyrics",
+    "lyricsMetadataDescription": "Read the lyrics and track notes for {title} by Cielo Rojo."
+  },
+  "Tour": {
+    "eyebrow": "On the road",
+    "title": "Meet us where the volume lives.",
+    "intro": "A first run of intimate rooms across Mexico, the United States, and Spain.",
+    "all": "All dates",
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "filterLabel": "Filter tour dates",
+    "empty": "No dates in this view.",
+    "venueTba": "Venue to be announced"
+  },
+  "Merch": {
+    "eyebrow": "Official goods",
+    "title": "Wear the record out into the world.",
+    "intro": "Prototype collection. Final artwork, inventory, and store links will be added before launch.",
+    "shopNotice": "Store preview",
+    "shopNoticeBody": "Checkout is intentionally disabled until a fulfillment partner is selected.",
+    "price": "${price} USD"
+  },
+  "News": {
+    "eyebrow": "News and field notes",
+    "title": "Signals from Cielo Rojo.",
+    "intro": "Release updates, live announcements, and stories from behind the record.",
+    "published": "Published {date}",
+    "latest": "Latest story",
+    "backToNews": "Back to all news"
+  },
+  "Contact": {
+    "eyebrow": "Contact",
+    "title": "Start a conversation.",
+    "intro": "For press, booking, licensing, or collaboration inquiries, leave a note below.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send message",
+    "demoNotice": "This prototype form does not send email yet.",
+    "success": "Your demo message is ready. The live form will connect before launch.",
+    "press": "Press and booking",
+    "social": "Find Cielo Rojo",
+    "pressEmail": "press@cielorojo.example",
+    "emailNote": "Placeholder address for the prototype"
+  },
+  "DesignSystem": {
+    "eyebrow": "Internal reference",
+    "title": "Design system",
+    "intro": "Core type, color, controls, and content surfaces for the Cielo Rojo prototype.",
+    "colors": "Color",
+    "type": "Typography",
+    "controls": "Controls",
+    "surfaces": "Surfaces",
+    "displaySample": "A red sky leaves no witnesses",
+    "bodySample": "Built for long-form stories, lyrics, dates, and the small details around a record.",
+    "primary": "Primary action",
+    "secondary": "Secondary action"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "Navigation": {
+    "skip": "Saltar al contenido",
+    "home": "Inicio",
+    "biography": "Historia",
+    "album": "Música",
+    "tour": "Gira",
+    "merch": "Tienda",
+    "news": "Noticias",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "primaryLabel": "Navegación principal"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Cielo Rojo — Sitio Oficial",
+      "description": "Entra al mundo de Cielo Rojo: música, letras, fechas de gira, historias y artículos oficiales."
+    },
+    "biography": {
+      "title": "La Historia",
+      "description": "Conoce la historia de Cielo Rojo y el proceso solista que dio forma al álbum debut."
+    },
+    "album": {
+      "title": "Álbum y Letras",
+      "description": "Explora las diez canciones del álbum conceptual Cielo Rojo y sus letras bilingües."
+    },
+    "tour": {
+      "title": "Gira",
+      "description": "Consulta las próximas fechas y conciertos pasados de Cielo Rojo."
+    },
+    "merch": {
+      "title": "Artículos Oficiales",
+      "description": "Descubre la colección de ropa, vinilo y arte de Cielo Rojo."
+    },
+    "news": {
+      "title": "Noticias",
+      "description": "Novedades del lanzamiento, anuncios de gira e historias de estudio de Cielo Rojo."
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "Contacta a Cielo Rojo para prensa, contratación, licencias y colaboraciones."
+    },
+    "designSystem": {
+      "title": "Sistema de Diseño",
+      "description": "Referencia visual interna del sitio de Cielo Rojo."
+    }
+  },
+  "Theme": {
+    "toLight": "Cambiar al tema claro",
+    "toDark": "Cambiar al tema oscuro"
+  },
+  "Language": {
+    "label": "Idioma",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "Footer": {
+    "tagline": "Música pesada forjada bajo un cielo rojo sangre.",
+    "explore": "Explora",
+    "follow": "Sigue",
+    "rights": "Todos los derechos reservados.",
+    "prototype": "Música independiente. Sin algoritmos en la sala."
+  },
+  "Common": {
+    "listen": "Escuchar ahora",
+    "readMore": "Leer más",
+    "viewAll": "Ver todo",
+    "details": "Detalles",
+    "buy": "Ver articulo",
+    "tickets": "Boletos",
+    "comingSoon": "Próximamente",
+    "onSale": "A la venta",
+    "soldOut": "Agotado",
+    "past": "Pasado",
+    "back": "Volver",
+    "placeholder": "Contenido de prototipo"
+  },
+  "Home": {
+    "eyebrow": "Comienza una nueva era",
+    "title": "Cielo Rojo",
+    "intro": "Una voz. Todos los instrumentos. Una década de fuego convertida en un solo disco.",
+    "primaryCta": "Entrar al álbum",
+    "secondaryCta": "Ver fechas de gira",
+    "featuredEyebrow": "Tema destacado",
+    "featuredTitle": "El cielo lo recuerda todo",
+    "featuredBody": "El tema principal pasa de un pulso solitario de guitarra de nylon a un muro de guitarras, siguiendo el instante en que el miedo se vuelve impulso.",
+    "newsEyebrow": "Transmisión",
+    "newsTitle": "Lo último del estudio",
+    "tourEyebrow": "Próximo ritual",
+    "tourTitle": "En vivo bajo el cielo rojo",
+    "heroAlt": "Público frente a un escenario iluminado",
+    "coverAlt": "Portada de Cielo Rojo con un sol rojo segmentado"
+  },
+  "Biography": {
+    "eyebrow": "La historia",
+    "title": "Hecho a solas. Creado para escucharse juntos.",
+    "intro": "Cielo Rojo es el sonido de un músico que se negó a dejar incompleta cualquier parte de la visión.",
+    "factsTitle": "En breve",
+    "origin": "Origen",
+    "originValue": "Guadalajara, México",
+    "genre": "Sonido",
+    "genreValue": "Metal progresivo / folk latino",
+    "format": "Formato",
+    "formatValue": "Proyecto solista de estudio",
+    "galleryTitle": "Dentro del proceso",
+    "portraitAlt": "Vocalista actuando bajo las luces del escenario",
+    "studioAlt": "Músico trabajando en un espacio de grabación",
+    "guitarAlt": "Vista cercana de una guitarra en interpretación",
+    "liveAlt": "Presentación en vivo bajo luz roja"
+  },
+  "Album": {
+    "eyebrow": "El álbum debut",
+    "title": "Diez canciones. Un viaje por el fuego.",
+    "intro": "Cielo Rojo sigue un camino desde la primera luz, a través de la pérdida y el colapso, hasta renacer.",
+    "tracklist": "Lista de canciones",
+    "track": "Tema",
+    "duration": "Tiempo",
+    "lyrics": "Letras",
+    "openLyrics": "Leer la letra de {title}",
+    "playerTitle": "Escuchar",
+    "playerUnavailable": "El reproductor llegará con el lanzamiento oficial del máster.",
+    "concept": "Álbum conceptual",
+    "release": "Lanzamiento independiente",
+    "year": "2026",
+    "backToAlbum": "Volver al álbum",
+    "lyricsHeading": "Letra y notas del tema",
+    "coverAlt": "Portada del álbum Cielo Rojo",
+    "lyricsMetadataTitle": "Letra de {title}",
+    "lyricsMetadataDescription": "Lee la letra y las notas de {title} de Cielo Rojo."
+  },
+  "Tour": {
+    "eyebrow": "En el camino",
+    "title": "Nos vemos donde vive el volumen.",
+    "intro": "Una primera serie de salas íntimas por México, Estados Unidos y España.",
+    "all": "Todas las fechas",
+    "upcoming": "Próximas",
+    "past": "Pasadas",
+    "filterLabel": "Filtrar fechas de gira",
+    "empty": "No hay fechas en esta vista.",
+    "venueTba": "Sala por anunciar"
+  },
+  "Merch": {
+    "eyebrow": "Artículos oficiales",
+    "title": "Lleva el disco al mundo.",
+    "intro": "Colección de prototipo. El arte final, inventario y enlaces de compra se agregarán antes del lanzamiento.",
+    "shopNotice": "Vista previa de tienda",
+    "shopNoticeBody": "La compra está desactivada hasta elegir un socio de distribución.",
+    "price": "${price} USD"
+  },
+  "News": {
+    "eyebrow": "Noticias y notas de campo",
+    "title": "Señales de Cielo Rojo.",
+    "intro": "Novedades del lanzamiento, anuncios en vivo e historias detrás del disco.",
+    "published": "Publicado el {date}",
+    "latest": "Historia reciente",
+    "backToNews": "Volver a todas las noticias"
+  },
+  "Contact": {
+    "eyebrow": "Contacto",
+    "title": "Inicia una conversación.",
+    "intro": "Para prensa, contratación, licencias o colaboraciones, deja una nota abajo.",
+    "name": "Nombre",
+    "email": "Correo",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "demoNotice": "Este formulario de prototipo aún no envía correos.",
+    "success": "Tu mensaje de prueba está listo. El formulario se conectará antes del lanzamiento.",
+    "press": "Prensa y contratación",
+    "social": "Encuentra a Cielo Rojo",
+    "pressEmail": "prensa@cielorojo.example",
+    "emailNote": "Dirección provisional para el prototipo"
+  },
+  "DesignSystem": {
+    "eyebrow": "Referencia interna",
+    "title": "Sistema de diseño",
+    "intro": "Tipografía, color, controles y superficies del prototipo de Cielo Rojo.",
+    "colors": "Color",
+    "type": "Tipografía",
+    "controls": "Controles",
+    "surfaces": "Superficies",
+    "displaySample": "Un cielo rojo no deja testigos",
+    "bodySample": "Creado para historias, letras, fechas y los pequeños detalles alrededor de un disco.",
+    "primary": "Accion principal",
+    "secondary": "Accion secundaria"
+  }
+}

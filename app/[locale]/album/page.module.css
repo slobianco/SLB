@@ -1,0 +1,45 @@
+.albumSection {
+  padding-block: var(--space-9) var(--space-10);
+}
+
+.albumGrid {
+  display: grid;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.cover {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-5));
+  max-width: 36rem;
+  box-shadow: var(--shadow-high);
+}
+
+.cover img {
+  width: 100%;
+  height: auto;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.albumDetails h2 {
+  margin-block: var(--space-6) var(--space-4);
+  font-size: 2.2rem;
+}
+
+@media (min-width: 50rem) {
+  .albumGrid {
+    grid-template-columns: minmax(18rem, 0.78fr) minmax(24rem, 1.22fr);
+  }
+}
+
+@media (max-width: 49.99rem) {
+  .cover {
+    position: relative;
+    top: auto;
+  }
+}

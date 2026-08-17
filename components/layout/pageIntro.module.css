@@ -1,0 +1,47 @@
+.pageIntro {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-9) var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pageIntro::after {
+  position: absolute;
+  right: -8rem;
+  bottom: -7rem;
+  width: 25rem;
+  height: 12rem;
+  border-top: 1px solid var(--color-accent);
+  content: '';
+  transform: rotate(-18deg);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-4);
+  color: var(--color-accent-strong);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.pageIntro h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 54rem;
+  font-size: 3.7rem;
+}
+
+.intro {
+  position: relative;
+  z-index: 1;
+  max-width: 43rem;
+  margin-top: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+@media (min-width: 48rem) {
+  .pageIntro h1 {
+    font-size: 5.25rem;
+  }
+}

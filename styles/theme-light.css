@@ -1,0 +1,21 @@
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-bg: #f2efe8;
+  --color-surface: #ffffff;
+  --color-surface-raised: #e6e1d8;
+  --color-text: #171516;
+  --color-text-muted: #625e5b;
+  --color-accent: #a60d28;
+  --color-accent-strong: #c81735;
+  --color-accent-contrast: #ffffff;
+  --color-steel: #4d565d;
+  --color-border: rgb(23 21 22 / 18%);
+  --color-border-strong: rgb(23 21 22 / 38%);
+  --color-grid-line: rgb(23 21 22 / 4%);
+  --color-focus: #8d001a;
+  --color-overlay: rgb(20 14 16 / 62%);
+  --color-overlay-soft: rgb(20 14 16 / 30%);
+  --color-header: rgb(242 239 232 / 90%);
+  --shadow-low: 0 10px 30px rgb(50 35 38 / 12%);
+  --shadow-high: 0 24px 70px rgb(50 35 38 / 20%);
+}

@@ -1,7 +1,7 @@
 # Architecture
 
-> Status: draft skeleton created in Phase 0.6. Will be finalized in Phase 6 once the design
-> system, i18n, content layer, and pages exist.
+> Status: implementation snapshot updated after Phases 1–5. Deployment topology and the final
+> component inventory will be finalized in Phase 6.
 
 ## Overview
 

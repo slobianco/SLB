@@ -1,0 +1,50 @@
+.contactSection {
+  padding-block: var(--space-9) var(--space-10);
+}
+
+.contactGrid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.contactAside {
+  display: grid;
+  align-content: start;
+  gap: var(--space-7);
+}
+
+.emailBlock {
+  display: flex;
+  gap: var(--space-4);
+  padding-top: var(--space-5);
+  border-top: 2px solid var(--color-accent);
+}
+
+.emailBlock > svg {
+  width: 1.4rem;
+  flex: 0 0 auto;
+  color: var(--color-accent-strong);
+}
+
+.emailBlock h2,
+.socialTitle {
+  margin-bottom: var(--space-3);
+  font-size: 1.4rem;
+}
+
+.emailBlock a {
+  color: var(--color-accent-strong);
+  overflow-wrap: anywhere;
+}
+
+.emailBlock p {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+}
+
+@media (min-width: 56rem) {
+  .contactGrid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+  }
+}

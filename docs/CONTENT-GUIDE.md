@@ -1,8 +1,7 @@
 # Content Guide
 
-> Status: draft skeleton created in Phase 0.6, based on the planned content model. Will be
-> finalized in Phase 6 once `content/` and `lib/data/` exist (Phase 4). Until then, treat the
-> paths below as the target structure, not yet present in the repo.
+> Status: the Phase 4 content model and accessors are implemented. This guide will receive its
+> final editorial pass in Phase 6; the paths and fields below are active now.
 
 This guide is for adding/editing site content **without writing any component code**. All
 content lives under `content/` as Markdown/MDX (with frontmatter) or JSON, and is bilingual
@@ -33,8 +32,8 @@ Frontmatter fields: `title`, `updatedAt`. Body is Markdown (GitHub-flavored).
    ---
    ```
    Followed by the lyrics as Markdown body.
-3. The track list page and `[track]` route pick up new songs automatically once
-   `lib/data/getSongs.ts` exists (Phase 4) — no code changes needed.
+3. The track list page and `[track]` route pick up new songs automatically through
+   `lib/data/getSongs.ts` — no component changes needed.
 
 ## Add or update a tour date
 

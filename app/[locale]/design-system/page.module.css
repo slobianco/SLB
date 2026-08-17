@@ -1,0 +1,92 @@
+.eyebrow {
+  margin-bottom: var(--space-4);
+  color: var(--color-accent-strong);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 42rem;
+  margin-top: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: 1.15rem;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.grid > div {
+  min-width: 0;
+}
+
+.grid h2 {
+  margin-bottom: var(--space-5);
+  font-size: 1.5rem;
+}
+
+.swatches,
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.swatches span {
+  min-width: 7rem;
+  min-height: 5rem;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.accent {
+  color: #ffffff;
+  background: var(--color-accent);
+}
+
+.surface {
+  background: var(--color-surface);
+}
+
+.steel {
+  color: #ffffff;
+  background: var(--color-steel);
+}
+
+.display {
+  max-width: 30rem;
+  margin-bottom: var(--space-4);
+  font-family: var(--font-display), sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.cardSample {
+  max-width: 24rem;
+  padding: var(--space-5);
+}
+
+.cardSample h3 {
+  margin-block: var(--space-4);
+  font-size: 1.5rem;
+}
+
+.cardSample p {
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 54rem) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

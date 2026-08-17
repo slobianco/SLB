@@ -1,0 +1,29 @@
+.merchSection {
+  padding-block: var(--space-8) var(--space-10);
+}
+
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-7);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-accent);
+}
+
+.notice > svg {
+  width: 1.5rem;
+  flex: 0 0 auto;
+  color: var(--color-accent-strong);
+}
+
+.notice h2 {
+  font-size: 1.4rem;
+}
+
+.notice p {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+}

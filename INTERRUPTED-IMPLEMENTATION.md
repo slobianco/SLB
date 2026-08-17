@@ -5,19 +5,23 @@
 session can resume precisely from here — no re-discovery needed.
 
 ## TL;DR — resume in this order
+
 1. Fix environment PATH for Git and Node.js (see **Environment Blockers**) — nothing else works without this.
 2. Make the first git commit — the repo currently has **zero commits** (see **Git State**).
 3. Continue **Phase 0** from step 2 onward, then Phases 1–8 (see **Resume Checklist**).
 
 ## Where implementation stopped
+
 Phase 0 ("Bootstrap & Engineering Foundations") **step 1 of 7 is complete**: the Next.js app was
 scaffolded directly at the repo root with `create-next-app` (App Router + TypeScript), and a
-handful of dependencies needed for *later* phases were installed ahead of schedule. Work stopped
+handful of dependencies needed for _later_ phases were installed ahead of schedule. Work stopped
 **before**:
+
 - any Phase 0 tooling was added (Prettier, Husky/lint-staged, commitlint, Changesets, CI, ADRs, Vercel link)
 - any Phase 1+ code was written — `app/` and `public/` are still 100% default `create-next-app` boilerplate, nothing from the design system, i18n, layout, content layer, or pages exists yet.
 
 ## Verified current repo state (inspected directly, not assumed)
+
 ```
 SLB/
 ├── .git/                    ← initialized ("main" branch), but 0 commits — see Git State
@@ -41,6 +45,7 @@ SLB/
 ├── README.md                   ← still default create-next-app README, not yet customized
 └── tsconfig.json
 ```
+
 **Not yet created:** `docs/` (`ARCHITECTURE.md`, `CONTENT-GUIDE.md`, `adr/`),
 `.github/workflows/ci.yml`, `.husky/`, `commitlint.config.*`, `.changeset/`, `.prettierrc`,
 `content/`, `lib/`, `components/`, `styles/tokens.css` (+ theme files), `messages/{en,es}.json`,
@@ -49,6 +54,7 @@ directory, or `%TEMP%` — the earlier "move to repo root / clean up temp folder
 cleanly.
 
 ## Dependencies already installed (`package.json`)
+
 - `next` 15.5.23, `react`/`react-dom` 19.2.8 — framework (Phase 0 ✅)
 - `next-intl` ^4.13.6 — i18n routing, pre-installed for Phase 2 (**not wired up yet**)
 - `gray-matter` ^4.0.3, `react-markdown` ^10.1.0, `remark-gfm` ^4.0.1 — content/MDX parsing,
@@ -60,17 +66,20 @@ cleanly.
   conflict; reason wasn't recorded before the interruption — verify before removing.
 
 ## Git State — ACTION NEEDED
+
 The repository is initialized on branch `main` but **has zero commits**. Every file — the entire
 scaffold plus the pre-existing `AGENTS.md`/`CLAUDE.md`/`README.md` — is currently **untracked**.
 Nothing is safeguarded in git history yet.
 
 **First action on resume** (after fixing PATH below):
+
 ```powershell
 git add -A
 git commit -m "chore: scaffold Next.js app with create-next-app"
 ```
 
 ## Environment Blockers (discovered and verified this session)
+
 1. **Git is installed but missing from PATH in new terminals.**
    Confirmed on disk at `C:\Program Files\Git\bin\git.exe` and `...\cmd\git.exe`, and via
    `winget list` (`Git.Git 2.55.0.4`) — but a fresh PowerShell session's `$env:PATH` contains
@@ -92,6 +101,7 @@ git commit -m "chore: scaffold Next.js app with create-next-app"
      don't force through it) or install from nodejs.org. Restart terminals/VS Code afterward.
 
 ## Resume Checklist
+
 - [ ] Fix Git + Node PATH (see **Environment Blockers**)
 - [ ] `git add -A && git commit -m "chore: scaffold Next.js app"` (safeguard current work)
 - [ ] Phase 0.2 — Review ESLint config, add Prettier (`.prettierrc`, `.prettierignore`)
@@ -114,6 +124,7 @@ git commit -m "chore: scaffold Next.js app with create-next-app"
 - [ ] Phase 8 — Deployment & launch
 
 ## Reference material already prepared (not yet consumed by code)
+
 - Full 9-phase plan (steps, relevant files, verification, decisions) from the planning session —
   recreate as `docs/IMPLEMENTATION-PLAN.md` in Phase 0.6.
 - Full dummy/placeholder content draft — band bio (EN/ES), 10-track lyrics concept arc, tour

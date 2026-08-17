@@ -1,17 +1,28 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import { FlatCompat } from '@eslint/eslintrc';
+import prettierConfig from 'eslint-config-prettier';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// eslint-config-next currently ships legacy (eslintrc-style) presets, not native
+// flat config arrays, so we bridge them into flat config via FlatCompat.
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
 
 const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
+  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  prettierConfig,
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
   ]),
 ]);
 

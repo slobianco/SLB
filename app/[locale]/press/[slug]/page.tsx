@@ -75,9 +75,6 @@ export default async function PressItemPage({ params }: PressItemPageProps) {
             </div>
             <h1>{item.title}</h1>
             <p>{item.summary}</p>
-            {item.isPrototype ? (
-              <p className={styles.disclaimer}>{translations('disclaimer')}</p>
-            ) : null}
           </Container>
         </header>
         {item.image ? (

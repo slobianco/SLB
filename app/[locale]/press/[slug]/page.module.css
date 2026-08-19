@@ -51,17 +51,6 @@
   font-size: 1.1rem;
 }
 
-.disclaimer {
-  max-width: 46rem;
-  margin-top: var(--space-5);
-  padding: var(--space-4);
-  color: var(--color-text-muted);
-  background: var(--color-surface);
-  border-left: 3px solid var(--color-accent);
-  font-size: 0.8rem;
-  font-style: italic;
-}
-
 .cover {
   position: relative;
   aspect-ratio: 16 / 8;

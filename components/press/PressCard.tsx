@@ -46,7 +46,6 @@ export function PressCard({
           <Link href={`/press/${item.slug}`}>{item.title}</Link>
         </h2>
         <p>{item.summary}</p>
-        {item.isPrototype ? <p className={styles.disclaimer}>{press('disclaimer')}</p> : null}
         <Link className={styles.readMore} href={`/press/${item.slug}`}>
           {press('readInterview')} <ArrowRight aria-hidden="true" />
         </Link>

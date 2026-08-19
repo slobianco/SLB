@@ -72,8 +72,6 @@ export type PressItem = {
   /** Optional hero image; omit rather than inventing stock photography when none is supplied. */
   image?: string;
   content: string;
-  /** True for fictional/demo editorial content — see docs/CONTENT-GUIDE.md. Never treat as real coverage. */
-  isPrototype?: boolean;
   externalUrl?: string;
 };
 

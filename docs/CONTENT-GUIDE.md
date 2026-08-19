@@ -101,7 +101,6 @@ summary: 'TODO: Approved one-paragraph summary'
 date: 'YYYY-MM-DD'
 publication: 'TODO: Real outlet name (omit entirely for prototype/concept content)'
 image: '/images/press/TODO-approved-image.jpg'
-isPrototype: true
 externalUrl: ''
 ---
 ```
@@ -113,11 +112,8 @@ For the article body, write plain Markdown. Pull quotes use standard blockquote 
 (`> Quote text`). For interviews, format each question as a `### Question text?` heading followed
 by the answer as a normal paragraph — the interview page styles these distinctly.
 
-`isPrototype` marks fictional/demo editorial content that has not been published by a real outlet
-— set it to `true` for placeholder/concept pieces (which also renders a visible disclaimer on the
-site) and omit it (or set `false`) once an item is genuine, approved press coverage. Never invent
-journalists, publications, URLs, quotes, review scores, endorsements, awards, or audience figures
-for a real-looking press item — use an explicit `TODO` instead.
+Never invent journalists, publications, URLs, quotes, review scores, endorsements, awards, or
+audience figures for a real-looking press item — use an explicit `TODO` instead.
 
 ## Update social links
 

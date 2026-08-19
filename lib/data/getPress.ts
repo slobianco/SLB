@@ -4,7 +4,6 @@ import {
   isSafeSlug,
   listContentDirectories,
   readMdxFile,
-  readOptionalBoolean,
   readOptionalString,
   requireString,
 } from './files';
@@ -31,7 +30,6 @@ function readPressItem(locale: Locale, slug: string): PressItem {
     publication: readOptionalString(frontmatter, 'publication'),
     image: readOptionalString(frontmatter, 'image'),
     content,
-    isPrototype: readOptionalBoolean(frontmatter, 'isPrototype'),
     externalUrl: readOptionalString(frontmatter, 'externalUrl'),
   };
 }

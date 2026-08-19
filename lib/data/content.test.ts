@@ -40,10 +40,9 @@ describe('file content accessors', () => {
     expect(getNewsPost('en', '../../package')).toBeNull();
   });
 
-  it('loads the prototype press interview and flags it as non-real coverage', () => {
+  it('loads the press interview', () => {
     const items = getPressItems('en');
     expect(items).toHaveLength(1);
-    expect(items[0].isPrototype).toBe(true);
     expect(getPressItem('en', 'santiago-lo-bianco-interview')?.type).toBe('interview');
     expect(getPressItem('en', 'not-a-real-slug')).toBeNull();
   });

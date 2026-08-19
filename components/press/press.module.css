@@ -69,13 +69,6 @@
   color: var(--color-text-muted);
 }
 
-.disclaimer {
-  margin-top: var(--space-4);
-  color: var(--color-text-muted);
-  font-size: 0.72rem;
-  font-style: italic;
-}
-
 .readMore {
   display: inline-flex;
   align-items: center;

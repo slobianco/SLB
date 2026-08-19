@@ -50,6 +50,12 @@
   color: var(--color-accent-strong);
 }
 
+.logoMark {
+  height: 2rem;
+  width: auto;
+  align-self: center;
+}
+
 .desktopNav {
   display: none;
   align-items: center;

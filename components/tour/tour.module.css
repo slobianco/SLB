@@ -76,6 +76,20 @@
   font-size: 0.82rem;
 }
 
+.location p strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.location .country {
+  color: var(--color-text-muted);
+}
+
+.location .country::before {
+  content: '\2014';
+  margin-inline: 0.4em;
+}
+
 .location svg {
   width: 0.9rem;
 }

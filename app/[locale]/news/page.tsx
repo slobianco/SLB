@@ -14,13 +14,14 @@ type NewsPageProps = {
 
 export async function generateMetadata({ params }: NewsPageProps): Promise<Metadata> {
   const locale = await getLocale(params);
-  return getPageMetadata(locale, 'news', '/news', '/images/news/album-arrives.jpg');
+  return getPageMetadata(locale, 'news', '/news');
 }
 
 export default async function NewsPage({ params }: NewsPageProps) {
   const locale = await getLocale(params);
   setRequestLocale(locale);
   const translations = await getTranslations({ locale, namespace: 'News' });
+  const posts = getNews(locale);
 
   return (
     <main id="main-content">
@@ -31,7 +32,11 @@ export default async function NewsPage({ params }: NewsPageProps) {
       />
       <section className={styles.newsSection}>
         <Container>
-          <NewsGrid posts={getNews(locale)} locale={locale} />
+          {posts.length > 0 ? (
+            <NewsGrid posts={posts} locale={locale} />
+          ) : (
+            <p>{translations('empty')}</p>
+          )}
         </Container>
       </section>
     </main>

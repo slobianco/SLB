@@ -2,6 +2,7 @@
 
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -46,6 +47,13 @@ export function Header() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link className={styles.wordmark} href="/" aria-label="Cielo Rojo">
+            <Image
+              className={styles.logoMark}
+              src="/images/branding/slb-logo.png"
+              alt=""
+              width={80}
+              height={80}
+            />
             <span>Cielo</span> Rojo
           </Link>
 

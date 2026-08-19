@@ -9,7 +9,7 @@ export async function getPageMetadata(
   locale: Locale,
   page: MetadataPage,
   pathname: string,
-  image = '/images/album/cielo-rojo-cover.jpg',
+  image = '/images/album/cielo-rojo-cover.png',
 ): Promise<Metadata> {
   const translations = await getTranslations({ locale, namespace: 'Metadata' });
   const title = translations(`${page}.title`);

@@ -60,8 +60,8 @@ export default async function DesignSystemPage({ params }: DesignSystemPageProps
             <div>
               <h2>{translations('surfaces')}</h2>
               <Card className={styles.cardSample}>
-                <Badge>Prototype</Badge>
-                <h3>Cenizas y estrellas</h3>
+                <Badge>{translations('placeholder')}</Badge>
+                <h3>{translations('surfaceTitle')}</h3>
                 <p>{translations('bodySample')}</p>
               </Card>
             </div>

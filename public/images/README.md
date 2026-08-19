@@ -7,7 +7,6 @@ with the artist's real photography, album art, and product shots before launch.
 
 Royalty-free prototype photography is from Unsplash:
 
-- `hero-stage.jpg`: photo `1506157786151-b8491531f063`
 - `biography/portrait.jpg`: photo `1493225457124-a3eb161ffa5f`
 - `biography/guitar.jpg`: photo `1510915361894-db8b60106cb1`
 - `biography/live.jpg`: photo `1524368535928-5b5e00ddc76b`
@@ -15,7 +14,18 @@ Royalty-free prototype photography is from Unsplash:
 
 The news images reuse the relevant prototype photography above.
 
-## Generated artwork
+`hero-stage.png` is a real supplied photo (Santiago in Rome), replacing the earlier Unsplash
+placeholder.
 
-`album/cielo-rojo-cover.jpg` and the eight files under `merch/` are original bitmap mockups
-generated locally for this prototype. They do not represent final products.
+## Album artwork
+
+`album/cielo-rojo-cover.png` (front cover) and `album/cielo-rojo-back-cover.png` (back cover) are
+supplied by the artist and represent the real Cielo Rojo album artwork.
+
+## Branding
+
+`branding/slb-logo.png` is the artist-supplied band logo, used in the site header.
+
+## Merch photography
+
+The eight files under `merch/` are real, artist-supplied product photos.

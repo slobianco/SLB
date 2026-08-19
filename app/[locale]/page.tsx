@@ -17,7 +17,7 @@ type HomePageProps = {
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
   const locale = await getLocale(params);
-  return getPageMetadata(locale, 'home', '/', '/images/hero-stage.jpg');
+  return getPageMetadata(locale, 'home', '/', '/images/hero-stage.png');
 }
 
 export default async function HomePage({ params }: HomePageProps) {
@@ -28,13 +28,13 @@ export default async function HomePage({ params }: HomePageProps) {
   const songs = getSongs(locale);
   const news = getNews(locale).slice(0, 2);
   const nextDate = getTourDates().find((date) => date.status !== 'past');
-  const featuredSong = songs.find((song) => song.slug === 'cielo-rojo') ?? songs[0];
+  const featuredSong = songs.find((song) => song.slug === 'silent-memory') ?? songs[0];
 
   return (
     <main id="main-content">
       <section className={styles.hero}>
         <Image
-          src="/images/hero-stage.jpg"
+          src="/images/hero-stage.png"
           alt={translations('heroAlt')}
           fill
           priority
@@ -65,8 +65,8 @@ export default async function HomePage({ params }: HomePageProps) {
         <Container className={styles.featuredGrid}>
           <div className={styles.coverWrap}>
             <Image
-              src="/images/album/cielo-rojo-cover.jpg"
-              alt={translations('coverAlt')}
+              src={featuredSong.image ?? '/images/album/cielo-rojo-cover.png'}
+              alt={featuredSong.image ? featuredSong.title : translations('coverAlt')}
               width={1200}
               height={1200}
               sizes="(max-width: 48rem) 100vw, 45vw"
@@ -74,12 +74,12 @@ export default async function HomePage({ params }: HomePageProps) {
           </div>
           <div className={styles.featuredCopy}>
             <p className={styles.eyebrow}>{translations('featuredEyebrow')}</p>
-            <h2>{translations('featuredTitle')}</h2>
-            <p>{translations('featuredBody')}</p>
+            <h2>{featuredSong.title}</h2>
+            <p>{featuredSong.echo}</p>
             <div className={styles.trackMeta}>
               <span>{String(featuredSong.trackNumber).padStart(2, '0')}</span>
               <strong>{featuredSong.title}</strong>
-              <span>{featuredSong.duration}</span>
+              {featuredSong.duration ? <span>{featuredSong.duration}</span> : null}
             </div>
             <Button href={`/album/${featuredSong.slug}`}>
               {common('listen')}
@@ -89,24 +89,26 @@ export default async function HomePage({ params }: HomePageProps) {
         </Container>
       </section>
 
-      <section className={styles.newsSection}>
-        <Container>
-          <div className={styles.sectionHeader}>
-            <div>
-              <p className={styles.eyebrow}>{translations('newsEyebrow')}</p>
-              <h2>{translations('newsTitle')}</h2>
+      {news.length > 0 ? (
+        <section className={styles.newsSection}>
+          <Container>
+            <div className={styles.sectionHeader}>
+              <div>
+                <p className={styles.eyebrow}>{translations('newsEyebrow')}</p>
+                <h2>{translations('newsTitle')}</h2>
+              </div>
+              <Button href="/news" variant="ghost">
+                {common('viewAll')} <ArrowRight aria-hidden="true" />
+              </Button>
             </div>
-            <Button href="/news" variant="ghost">
-              {common('viewAll')} <ArrowRight aria-hidden="true" />
-            </Button>
-          </div>
-          <div className={styles.newsGrid}>
-            {news.map((post) => (
-              <NewsCard key={post.slug} post={post} locale={locale} />
-            ))}
-          </div>
-        </Container>
-      </section>
+            <div className={styles.newsGrid}>
+              {news.map((post) => (
+                <NewsCard key={post.slug} post={post} locale={locale} />
+              ))}
+            </div>
+          </Container>
+        </section>
+      ) : null}
 
       {nextDate ? (
         <section className={styles.tourCallout}>

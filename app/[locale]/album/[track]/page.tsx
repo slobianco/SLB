@@ -1,10 +1,9 @@
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, Quote } from 'lucide-react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PlayerEmbed } from '@/components/album/PlayerEmbed';
 import { Markdown } from '@/components/content/Markdown';
-import { Badge } from '@/components/ui/Badge';
 import { Container } from '@/components/ui/Container';
 import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
@@ -58,17 +57,25 @@ export default async function TrackPage({ params }: TrackPageProps) {
           </Link>
           <div className={styles.headerMeta}>
             <span>CR / {String(song.trackNumber).padStart(2, '0')}</span>
-            <Badge>{song.theme}</Badge>
           </div>
           <h1>{song.title}</h1>
-          <p>{song.duration}</p>
+          {song.duration ? <p>{song.duration}</p> : null}
         </Container>
       </header>
       <section className={styles.trackBody}>
         <Container className={styles.trackGrid}>
           <article>
             <h2>{translations('lyricsHeading')}</h2>
-            <Markdown content={song.content} className={styles.lyrics} />
+            <Markdown content={song.content} className={styles.lyrics} preserveLineBreaks />
+            {song.echo ? (
+              <blockquote className={styles.echo}>
+                <span className={styles.echoLabel}>
+                  <Quote aria-hidden="true" />
+                  {translations('echoLabel')}
+                </span>
+                <p>{song.echo}</p>
+              </blockquote>
+            ) : null}
           </article>
           <aside>
             <PlayerEmbed song={song} />

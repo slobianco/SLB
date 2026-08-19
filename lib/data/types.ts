@@ -10,8 +10,11 @@ export type Song = {
   slug: string;
   title: string;
   trackNumber: number;
-  duration: string;
-  theme: string;
+  duration?: string;
+  /** A short reflective line or question left with the listener after the song. */
+  echo?: string;
+  /** Optional track-specific artwork; falls back to the main album cover when absent. */
+  image?: string;
   streamingLinks: StreamingLinks;
   content: string;
 };
@@ -26,6 +29,12 @@ export type TourDate = {
   venue: string;
   ticketUrl: string;
   status: TourStatus;
+  /**
+   * True for fictional/demo tour dates used to prototype this section before real dates are
+   * announced. Explicitly authorised as placeholder content — see docs/CONTENT-GUIDE.md. Never
+   * treat isPrototype dates as confirmed real-world Cielo Rojo events.
+   */
+  isPrototype?: boolean;
 };
 
 export type MerchCategory = 'apparel' | 'music' | 'accessories' | 'art';
@@ -33,7 +42,7 @@ export type MerchCategory = 'apparel' | 'music' | 'accessories' | 'art';
 export type MerchItem = {
   id: string;
   name: string;
-  variant: string;
+  variant?: string;
   priceUsd: number;
   image: string;
   purchaseUrl: string;

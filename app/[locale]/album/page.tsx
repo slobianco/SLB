@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { TrackList } from '@/components/album/TrackList';
 import { PageIntro } from '@/components/layout/PageIntro';
-import { Badge } from '@/components/ui/Badge';
 import { Container } from '@/components/ui/Container';
 import { getSongs } from '@/lib/data';
 import { getLocale } from '@/lib/i18n/locale';
@@ -36,7 +35,7 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
         <Container className={styles.albumGrid}>
           <div className={styles.cover}>
             <Image
-              src="/images/album/cielo-rojo-cover.jpg"
+              src="/images/album/cielo-rojo-cover.png"
               alt={translations('coverAlt')}
               width={1200}
               height={1200}
@@ -45,13 +44,22 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
             />
           </div>
           <div className={styles.albumDetails}>
-            <div className={styles.badges}>
-              <Badge>{translations('concept')}</Badge>
-              <Badge>{translations('release')}</Badge>
-              <Badge>{translations('year')}</Badge>
-            </div>
             <h2>{translations('tracklist')}</h2>
             <TrackList songs={songs} />
+          </div>
+        </Container>
+      </section>
+      <section className={styles.backCoverSection}>
+        <Container>
+          <h2>{translations('backCoverHeading')}</h2>
+          <div className={styles.backCover}>
+            <Image
+              src="/images/album/cielo-rojo-back-cover.png"
+              alt={translations('backCoverAlt')}
+              width={1200}
+              height={1200}
+              sizes="(max-width: 40rem) 100vw, 28rem"
+            />
           </div>
         </Container>
       </section>

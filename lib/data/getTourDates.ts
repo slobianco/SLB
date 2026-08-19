@@ -1,4 +1,4 @@
-import { readJsonFile, requireRecord, requireString } from './files';
+import { readJsonFile, requireRecord, requireString, readOptionalBoolean } from './files';
 import type { TourDate, TourStatus } from './types';
 
 const tourStatuses: TourStatus[] = ['on-sale', 'coming-soon', 'sold-out', 'past'];
@@ -28,6 +28,7 @@ export function getTourDates(): TourDate[] {
         venue: requireString(record, 'venue', context),
         ticketUrl: requireString(record, 'ticketUrl', context),
         status: status as TourStatus,
+        isPrototype: readOptionalBoolean(record, 'isPrototype'),
       };
     })
     .sort((first, second) => first.date.localeCompare(second.date));

@@ -21,7 +21,7 @@ export function MerchGrid({ items, locale }: { items: MerchItem[]; locale: Local
           <div className={styles.itemBody}>
             <Badge>{item.category}</Badge>
             <h2>{item.name}</h2>
-            <p>{item.variant}</p>
+            {item.variant ? <p>{item.variant}</p> : null}
             <div className={styles.itemFooter}>
               <strong>{formatPrice(item.priceUsd, locale)}</strong>
               {item.purchaseUrl ? (
@@ -30,7 +30,7 @@ export function MerchGrid({ items, locale }: { items: MerchItem[]; locale: Local
                 </Button>
               ) : (
                 <Button disabled size="small" variant="secondary">
-                  {common('comingSoon')}
+                  {common('addToCart')}
                 </Button>
               )}
             </div>

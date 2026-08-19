@@ -14,7 +14,7 @@ type TourPageProps = {
 
 export async function generateMetadata({ params }: TourPageProps): Promise<Metadata> {
   const locale = await getLocale(params);
-  return getPageMetadata(locale, 'tour', '/tour', '/images/hero-stage.jpg');
+  return getPageMetadata(locale, 'tour', '/tour', '/images/hero-stage.png');
 }
 
 export default async function TourPage({ params }: TourPageProps) {

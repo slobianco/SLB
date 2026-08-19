@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Markdown } from '@/components/content/Markdown';
 import { PageIntro } from '@/components/layout/PageIntro';
@@ -15,7 +14,7 @@ type BiographyPageProps = {
 
 export async function generateMetadata({ params }: BiographyPageProps): Promise<Metadata> {
   const locale = await getLocale(params);
-  return getPageMetadata(locale, 'biography', '/biography', '/images/biography/portrait.jpg');
+  return getPageMetadata(locale, 'biography', '/biography');
 }
 
 export default async function BiographyPage({ params }: BiographyPageProps) {
@@ -23,12 +22,6 @@ export default async function BiographyPage({ params }: BiographyPageProps) {
   setRequestLocale(locale);
   const translations = await getTranslations({ locale, namespace: 'Biography' });
   const bio = getBio(locale);
-
-  const facts = [
-    [translations('origin'), translations('originValue')],
-    [translations('genre'), translations('genreValue')],
-    [translations('format'), translations('formatValue')],
-  ];
 
   return (
     <main id="main-content">
@@ -38,62 +31,11 @@ export default async function BiographyPage({ params }: BiographyPageProps) {
         intro={translations('intro')}
       />
       <section className={styles.storySection}>
-        <Container className={styles.storyGrid}>
-          <div className={styles.portrait}>
-            <Image
-              src={bio.portraitImage}
-              alt={translations('portraitAlt')}
-              fill
-              sizes="(max-width: 52rem) 100vw, 42vw"
-              priority
-            />
-          </div>
+        <Container narrow>
           <article className={styles.story}>
             <h2>{bio.title}</h2>
             <Markdown content={bio.content} />
           </article>
-          <aside className={styles.facts}>
-            <h2>{translations('factsTitle')}</h2>
-            <dl>
-              {facts.map(([label, value]) => (
-                <div key={label}>
-                  <dt>{label}</dt>
-                  <dd>{value}</dd>
-                </div>
-              ))}
-            </dl>
-          </aside>
-        </Container>
-      </section>
-      <section className={styles.gallerySection}>
-        <Container>
-          <h2>{translations('galleryTitle')}</h2>
-          <div className={styles.gallery}>
-            <div className={styles.galleryWide}>
-              <Image
-                src="/images/biography/studio.jpg"
-                alt={translations('studioAlt')}
-                fill
-                sizes="66vw"
-              />
-            </div>
-            <div>
-              <Image
-                src="/images/biography/guitar.jpg"
-                alt={translations('guitarAlt')}
-                fill
-                sizes="33vw"
-              />
-            </div>
-            <div>
-              <Image
-                src="/images/biography/live.jpg"
-                alt={translations('liveAlt')}
-                fill
-                sizes="33vw"
-              />
-            </div>
-          </div>
         </Container>
       </section>
     </main>

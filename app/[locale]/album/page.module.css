@@ -43,3 +43,18 @@
     top: auto;
   }
 }
+
+.backCoverSection {
+  padding-block: 0 var(--space-10);
+}
+
+.backCover {
+  max-width: 28rem;
+  margin-inline: auto;
+  box-shadow: var(--shadow-high);
+}
+
+.backCover img {
+  width: 100%;
+  height: auto;
+}

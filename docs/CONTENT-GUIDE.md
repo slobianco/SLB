@@ -41,16 +41,23 @@ Edit `content/tour-dates.json` — an array of objects:
 
 ```json
 {
-  "date": "2026-10-03",
-  "city": "Mexico City",
-  "country": "MX",
-  "venue": "Foro Indie Rocks",
-  "ticketUrl": "",
-  "status": "on-sale"
+  "date": "YYYY-MM-DD",
+  "city": "TODO: Approved city",
+  "country": "TODO: Approved country code",
+  "venue": "TODO: Approved venue",
+  "ticketUrl": "TODO: Approved ticket URL",
+  "status": "coming-soon",
+  "isPrototype": true
 }
 ```
 
 `status` is one of `on-sale`, `coming-soon`, `sold-out`, `past`.
+
+`isPrototype` marks a date as fictional/demo content that has not been announced as a real show —
+set it to `true` for placeholder data and omit it (or set `false`) once a date is a real, approved
+announcement. The 15 dates currently in `content/tour-dates.json` ("Cielo Rojo World Tour 2027")
+are explicitly authorised prototype data, not real confirmed events — do not reference them as
+factual in the biography, `PROJECT-CONTEXT.md`, or other authoritative content.
 
 ## Add or update a merch item
 
@@ -58,12 +65,12 @@ Edit `content/merch.json` — an array of objects:
 
 ```json
 {
-  "name": "Tour T-Shirt",
-  "variant": "Black, front/back print",
-  "priceUsd": 28,
-  "image": "/images/merch/tshirt-black.jpg",
-  "purchaseUrl": "",
-  "category": "apparel"
+  "name": "TODO: Approved product name",
+  "variant": "TODO: Approved variant",
+  "priceUsd": 0,
+  "image": "/images/merch/TODO-approved-image.jpg",
+  "purchaseUrl": "TODO: Approved purchase URL",
+  "category": "TODO: Approved category"
 }
 ```
 
@@ -73,9 +80,9 @@ Create `content/news/<slug>/en.mdx` and `content/news/<slug>/es.mdx` with frontm
 
 ```yaml
 ---
-title: 'Cielo Rojo: The Album Has Arrived'
-publishedAt: '2026-10-01'
-coverImage: '/images/news/release-day.jpg'
+title: 'TODO: Approved news title'
+publishedAt: 'YYYY-MM-DD'
+coverImage: '/images/news/TODO-approved-image.jpg'
 ---
 ```
 
@@ -92,13 +99,12 @@ Edit `content/social-links.json`:
   "spotify": "",
   "bandcamp": "",
   "tiktok": "",
-  "facebook": "",
-  "twitter": ""
+  "facebook": ""
 }
 ```
 
 ## Publishing
 
 Content changes go through the same git workflow as code: commit with a Conventional Commit
-message (e.g. `content: add Ecos del Silencio lyrics`), push, open a PR — CI (format/lint/
+message (e.g. `content: add approved track lyrics`), push, open a PR — CI (format/lint/
 typecheck/build) validates the change, and Vercel builds a preview deploy automatically.

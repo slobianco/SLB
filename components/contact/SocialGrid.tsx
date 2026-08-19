@@ -12,9 +12,11 @@ const icons: Record<SocialLink['platform'], LucideIcon> = {
 };
 
 export function SocialGrid({ links }: { links: SocialLink[] }) {
+  const activeLinks = links.filter((link) => link.url);
+
   return (
     <div className={styles.socialGrid}>
-      {links.map(({ platform, url }) => {
+      {activeLinks.map(({ platform, url }) => {
         const Icon = icons[platform];
         return (
           <a key={platform} href={url} target="_blank" rel="noreferrer">

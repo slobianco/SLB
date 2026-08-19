@@ -57,7 +57,8 @@ export function TourList({ dates }: { dates: TourDate[] }) {
               <h2>{date.city}</h2>
               <p>
                 <MapPin aria-hidden="true" />
-                {date.venue}, {date.country}
+                <strong>{date.venue}</strong>
+                <span className={styles.country}>{date.country}</span>
               </p>
             </div>
             <span className={`${styles.status} ${styles[date.status.replace('-', '')]}`}>

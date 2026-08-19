@@ -26,7 +26,7 @@ const socialIcons: Record<SocialLink['platform'], LucideIcon> = {
 export function Footer() {
   const footer = useTranslations('Footer');
   const navigation = useTranslations('Navigation');
-  const socialLinks = getSocialLinks();
+  const socialLinks = getSocialLinks().filter((link) => link.url);
 
   return (
     <footer className={styles.footer}>
@@ -48,28 +48,30 @@ export function Footer() {
               ))}
             </nav>
           </div>
-          <div>
-            <h2>{footer('follow')}</h2>
-            <div className={styles.socialLinks}>
-              {socialLinks.map(({ platform, url }) => {
-                const Icon = socialIcons[platform];
-                const label = platform.charAt(0).toUpperCase() + platform.slice(1);
+          {socialLinks.length > 0 ? (
+            <div>
+              <h2>{footer('follow')}</h2>
+              <div className={styles.socialLinks}>
+                {socialLinks.map(({ platform, url }) => {
+                  const Icon = socialIcons[platform];
+                  const label = platform.charAt(0).toUpperCase() + platform.slice(1);
 
-                return (
-                  <a
-                    key={platform}
-                    href={url}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={label}
-                    title={label}
-                  >
-                    <Icon aria-hidden="true" />
-                  </a>
-                );
-              })}
+                  return (
+                    <a
+                      key={platform}
+                      href={url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={label}
+                      title={label}
+                    >
+                      <Icon aria-hidden="true" />
+                    </a>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
         <div className={styles.footerBottom}>
           <p>

@@ -23,6 +23,8 @@ export default async function ContactPage({ params }: ContactPageProps) {
   const locale = await getLocale(params);
   setRequestLocale(locale);
   const translations = await getTranslations({ locale, namespace: 'Contact' });
+  const socialLinks = getSocialLinks();
+  const hasSocialLinks = socialLinks.some((link) => link.url);
 
   return (
     <main id="main-content">
@@ -41,13 +43,16 @@ export default async function ContactPage({ params }: ContactPageProps) {
               <Mail aria-hidden="true" />
               <div>
                 <h2>{translations('press')}</h2>
-                <a href={`mailto:${translations('pressEmail')}`}>{translations('pressEmail')}</a>
-                <p>{translations('emailNote')}</p>
+                <p>{translations('pressUnavailable')}</p>
               </div>
             </div>
             <div>
               <h2 className={styles.socialTitle}>{translations('social')}</h2>
-              <SocialGrid links={getSocialLinks()} />
+              {hasSocialLinks ? (
+                <SocialGrid links={socialLinks} />
+              ) : (
+                <p>{translations('socialEmpty')}</p>
+              )}
             </div>
           </aside>
         </Container>

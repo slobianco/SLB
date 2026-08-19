@@ -18,9 +18,8 @@ export function TrackList({ songs }: { songs: Song[] }) {
             <span className={styles.trackNumber}>{String(song.trackNumber).padStart(2, '0')}</span>
             <span className={styles.trackIdentity}>
               <strong>{song.title}</strong>
-              <small>{song.theme}</small>
             </span>
-            <span className={styles.duration}>{song.duration}</span>
+            {song.duration ? <span className={styles.duration}>{song.duration}</span> : null}
             <ArrowUpRight aria-hidden="true" />
           </Link>
         </li>

@@ -10,9 +10,16 @@ describe('file content accessors', () => {
   it.each(['en', 'es'] as const)('loads the complete %s album in track order', (locale) => {
     const songs = getSongs(locale);
 
-    expect(songs).toHaveLength(10);
-    expect(songs.map((song) => song.trackNumber)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    expect(songs).toHaveLength(11);
+    expect(songs.map((song) => song.trackNumber)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
     expect(songs.every((song) => song.content.length > 0)).toBe(true);
+  });
+
+  it('never translates track titles between locales', () => {
+    const enTitles = getSongs('en').map((song) => song.title);
+    const esTitles = getSongs('es').map((song) => song.title);
+
+    expect(esTitles).toEqual(enTitles);
   });
 
   it('loads a known song and rejects unsafe or unknown slugs', () => {
@@ -23,29 +30,31 @@ describe('file content accessors', () => {
 
   it('loads localized biography content', () => {
     expect(getBio('en').title).not.toBe(getBio('es').title);
-    expect(getBio('en').content).toContain('placeholder');
+    expect(getBio('en').content).toContain('TODO');
   });
 
-  it('loads news newest first and resolves a detail post', () => {
-    const news = getNews('en');
-
-    expect(news).toHaveLength(3);
-    expect(news[0].publishedAt >= news[1].publishedAt).toBe(true);
-    expect(getNewsPost('es', 'behind-the-music')?.content).toContain('habitación');
+  it('has no news posts until real content is approved', () => {
+    expect(getNews('en')).toHaveLength(0);
+    expect(getNewsPost('en', 'any-slug')).toBeNull();
     expect(getNewsPost('en', '../../package')).toBeNull();
   });
 
-  it('loads and validates tour dates', () => {
+  it('loads the prototype tour dates in chronological order', () => {
     const dates = getTourDates();
-
-    expect(dates).toHaveLength(8);
-    expect(dates.some((date) => date.status === 'past')).toBe(true);
-    expect(dates.some((date) => date.status === 'on-sale')).toBe(true);
+    expect(dates).toHaveLength(15);
+    expect(dates.every((date) => date.isPrototype === true)).toBe(true);
+    expect(dates.every((date) => date.ticketUrl === '')).toBe(true);
+    expect(dates[0].date).toBe('2027-01-23');
+    expect(dates[dates.length - 1].date).toBe('2027-09-18');
   });
 
-  it('localizes merch and loads social links', () => {
+  it('loads the real merch catalog', () => {
     expect(getMerch('en')).toHaveLength(8);
-    expect(getMerch('en')[0].name).not.toBe(getMerch('es')[0].name);
+    expect(getMerch('en').every((item) => item.image.startsWith('/images/merch/'))).toBe(true);
+  });
+
+  it('has no social links until approved', () => {
     expect(getSocialLinks()).toHaveLength(6);
+    expect(getSocialLinks().every((link) => link.url === '')).toBe(true);
   });
 });

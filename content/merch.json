@@ -1,74 +1,66 @@
 [
   {
-    "id": "black-tour-tee",
-    "name": { "en": "Red Sky Tour Tee", "es": "Camiseta Gira Cielo Rojo" },
-    "variant": { "en": "Black, front and back print", "es": "Negra, impresión frontal y trasera" },
-    "priceUsd": 28,
-    "image": "/images/merch/tour-tee.jpg",
+    "id": "broken-time-wall-clock",
+    "name": { "en": "Broken Time Bronze Wall Clock", "es": "Reloj de Pared de Bronce Broken Time" },
+    "priceUsd": 45,
+    "image": "/images/merch/broken-time-wall-clock.png",
+    "purchaseUrl": "",
+    "category": "art"
+  },
+  {
+    "id": "cap",
+    "name": { "en": "Cap", "es": "Gorra" },
+    "priceUsd": 10,
+    "image": "/images/merch/cap.png",
     "purchaseUrl": "",
     "category": "apparel"
   },
   {
-    "id": "crimson-tee",
-    "name": { "en": "Crimson Album Tee", "es": "Camiseta Carmesí" },
-    "variant": { "en": "Washed charcoal, album art", "es": "Carbón lavado, arte del álbum" },
-    "priceUsd": 28,
-    "image": "/images/merch/crimson-tee.jpg",
+    "id": "echoes-box",
+    "name": { "en": "Echoes Box", "es": "Caja de Ecos" },
+    "priceUsd": 7,
+    "image": "/images/merch/echoes-box.png",
     "purchaseUrl": "",
-    "category": "apparel"
+    "category": "art"
   },
   {
-    "id": "splatter-vinyl",
-    "name": { "en": "Cielo Rojo Vinyl LP", "es": "Vinilo Cielo Rojo" },
-    "variant": { "en": "Red splatter, gatefold", "es": "Salpicado rojo, carpeta doble" },
-    "priceUsd": 34,
-    "image": "/images/merch/vinyl.jpg",
-    "purchaseUrl": "",
-    "category": "music"
-  },
-  {
-    "id": "digipak-cd",
-    "name": { "en": "Cielo Rojo CD", "es": "CD Cielo Rojo" },
-    "variant": { "en": "Digipak with lyric booklet", "es": "Digipak con libreto de letras" },
-    "priceUsd": 16,
-    "image": "/images/merch/cd.jpg",
-    "purchaseUrl": "",
-    "category": "music"
-  },
-  {
-    "id": "embroidered-hoodie",
-    "name": { "en": "Embroidered Hoodie", "es": "Sudadera Bordada" },
-    "variant": { "en": "Heavy black cotton", "es": "Algodón negro pesado" },
-    "priceUsd": 52,
-    "image": "/images/merch/hoodie.jpg",
-    "purchaseUrl": "",
-    "category": "apparel"
-  },
-  {
-    "id": "symbol-cap",
-    "name": { "en": "Red Sky Cap", "es": "Gorra Cielo Rojo" },
-    "variant": { "en": "Black and red snapback", "es": "Ajustable negra y roja" },
-    "priceUsd": 24,
-    "image": "/images/merch/cap.jpg",
-    "purchaseUrl": "",
-    "category": "apparel"
-  },
-  {
-    "id": "pin-set",
-    "name": { "en": "Album Symbol Pin Set", "es": "Set de Pines del Álbum" },
-    "variant": { "en": "Three hard-enamel pins", "es": "Tres pines de esmalte duro" },
-    "priceUsd": 12,
-    "image": "/images/merch/pins.jpg",
+    "id": "guitar-pick-tin",
+    "name": { "en": "Guitar Pick Tin", "es": "Lata de Púas" },
+    "priceUsd": 8,
+    "image": "/images/merch/guitar-pick-tin.png",
     "purchaseUrl": "",
     "category": "accessories"
   },
   {
-    "id": "red-sky-poster",
-    "name": { "en": "Red Sky Art Print", "es": "Lámina Cielo Rojo" },
-    "variant": { "en": "18 × 24 in, numbered", "es": "46 × 61 cm, numerada" },
-    "priceUsd": 15,
-    "image": "/images/merch/poster.jpg",
+    "id": "hoodie",
+    "name": { "en": "Hoodie", "es": "Sudadera con Capucha" },
+    "priceUsd": 20,
+    "image": "/images/merch/hoodie.png",
     "purchaseUrl": "",
-    "category": "art"
+    "category": "apparel"
+  },
+  {
+    "id": "mug",
+    "name": { "en": "Mug", "es": "Taza" },
+    "priceUsd": 5,
+    "image": "/images/merch/mug.png",
+    "purchaseUrl": "",
+    "category": "accessories"
+  },
+  {
+    "id": "t-shirt",
+    "name": { "en": "T-Shirt", "es": "Camiseta" },
+    "priceUsd": 16,
+    "image": "/images/merch/t-shirt.png",
+    "purchaseUrl": "",
+    "category": "apparel"
+  },
+  {
+    "id": "vinyl",
+    "name": { "en": "Vinyl", "es": "Vinilo" },
+    "priceUsd": 22,
+    "image": "/images/merch/vinyl.png",
+    "purchaseUrl": "",
+    "category": "music"
   }
 ]

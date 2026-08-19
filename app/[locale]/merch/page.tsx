@@ -1,4 +1,3 @@
-import { ShoppingBag } from 'lucide-react';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { PageIntro } from '@/components/layout/PageIntro';
@@ -15,7 +14,7 @@ type MerchPageProps = {
 
 export async function generateMetadata({ params }: MerchPageProps): Promise<Metadata> {
   const locale = await getLocale(params);
-  return getPageMetadata(locale, 'merch', '/merch', '/images/merch/vinyl.jpg');
+  return getPageMetadata(locale, 'merch', '/merch', '/images/merch/vinyl.png');
 }
 
 export default async function MerchPage({ params }: MerchPageProps) {
@@ -32,13 +31,6 @@ export default async function MerchPage({ params }: MerchPageProps) {
       />
       <section className={styles.merchSection}>
         <Container>
-          <div className={styles.notice}>
-            <ShoppingBag aria-hidden="true" />
-            <div>
-              <h2>{translations('shopNotice')}</h2>
-              <p>{translations('shopNoticeBody')}</p>
-            </div>
-          </div>
           <MerchGrid items={getMerch(locale)} locale={locale} />
         </Container>
       </section>

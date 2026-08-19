@@ -62,6 +62,16 @@ export function requireLocalizedString(value: unknown, locale: Locale, context: 
   return requireString(localized, locale, context);
 }
 
+export function readOptionalString(record: Record<string, unknown>, key: string) {
+  const value = record[key];
+  return typeof value === 'string' && value.length > 0 ? value : undefined;
+}
+
+export function readOptionalBoolean(record: Record<string, unknown>, key: string) {
+  const value = record[key];
+  return typeof value === 'boolean' ? value : undefined;
+}
+
 export function isSafeSlug(value: string) {
   return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value);
 }

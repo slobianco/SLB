@@ -15,31 +15,31 @@
   "Metadata": {
     "home": {
       "title": "Cielo Rojo — Official Site",
-      "description": "Enter the world of Cielo Rojo: music, lyrics, tour dates, stories, and official goods."
+      "description": "The official website for Cielo Rojo, an album by Santiago Lo Bianco."
     },
     "biography": {
       "title": "The Story",
-      "description": "Read the story behind Cielo Rojo and the solo process that shaped the debut album."
+      "description": "About Santiago Lo Bianco, the artist behind Cielo Rojo."
     },
     "album": {
       "title": "Album and Lyrics",
-      "description": "Explore the ten-track Cielo Rojo concept album and read bilingual lyrics."
+      "description": "Explore the Cielo Rojo tracklist by Santiago Lo Bianco."
     },
     "tour": {
       "title": "Tour",
-      "description": "See upcoming and past Cielo Rojo live dates."
+      "description": "Live dates for Cielo Rojo."
     },
     "merch": {
       "title": "Official Merch",
-      "description": "Preview the Cielo Rojo apparel, vinyl, and art collection."
+      "description": "Cielo Rojo merchandise."
     },
     "news": {
       "title": "News",
-      "description": "Release updates, tour announcements, and studio stories from Cielo Rojo."
+      "description": "News and updates from Cielo Rojo."
     },
     "contact": {
       "title": "Contact",
-      "description": "Contact Cielo Rojo for press, booking, licensing, and collaborations."
+      "description": "Contact information for Cielo Rojo."
     },
     "designSystem": {
       "title": "Design System",
@@ -56,11 +56,11 @@
     "spanish": "Spanish"
   },
   "Footer": {
-    "tagline": "Heavy music forged under a blood-red sky.",
+    "tagline": "The official site for Cielo Rojo, an album by Santiago Lo Bianco.",
     "explore": "Explore",
     "follow": "Follow",
     "rights": "All rights reserved.",
-    "prototype": "Independent music. No algorithms in the room."
+    "prototype": "Prototype build — content is being added progressively."
   },
   "Common": {
     "listen": "Listen now",
@@ -68,6 +68,7 @@
     "viewAll": "View all",
     "details": "Details",
     "buy": "View item",
+    "addToCart": "Add to cart",
     "tickets": "Tickets",
     "comingSoon": "Coming soon",
     "onSale": "On sale",
@@ -77,89 +78,74 @@
     "placeholder": "Prototype content"
   },
   "Home": {
-    "eyebrow": "A new era begins",
+    "eyebrow": "Website preview",
     "title": "Cielo Rojo",
-    "intro": "One voice. Every instrument. A decade of fire pressed into a single record.",
-    "primaryCta": "Enter the album",
-    "secondaryCta": "See tour dates",
-    "featuredEyebrow": "Featured track",
-    "featuredTitle": "The sky remembers everything",
-    "featuredBody": "The title track moves from a lone nylon-string pulse into a wall of guitars, tracing the moment fear becomes momentum.",
-    "newsEyebrow": "Transmission",
-    "newsTitle": "Latest from the studio",
-    "tourEyebrow": "Next ritual",
-    "tourTitle": "Live under the red sky",
-    "heroAlt": "Crowd facing a brightly lit concert stage",
-    "coverAlt": "Cielo Rojo album cover with a segmented red sun"
+    "intro": "An album by Santiago Lo Bianco. An introspective journey through time and identity—and the determination to keep moving when everything has changed.",
+    "primaryCta": "Explore the album",
+    "secondaryCta": "See live dates",
+    "featuredEyebrow": "From the album",
+    "newsEyebrow": "News",
+    "newsTitle": "Latest updates",
+    "tourEyebrow": "Live dates",
+    "tourTitle": "Upcoming shows",
+    "heroAlt": "Santiago Lo Bianco in Rome",
+    "coverAlt": "Cielo Rojo album cover"
   },
   "Biography": {
     "eyebrow": "The story",
-    "title": "Made alone. Built to be heard together.",
-    "intro": "Cielo Rojo is the sound of one musician refusing to leave any part of the vision unfinished.",
-    "factsTitle": "At a glance",
-    "origin": "Origin",
-    "originValue": "Guadalajara, Mexico",
-    "genre": "Sound",
-    "genreValue": "Progressive metal / Latin folk",
-    "format": "Format",
-    "formatValue": "Solo studio project",
-    "galleryTitle": "Inside the process",
-    "portraitAlt": "Vocalist performing beneath stage lights",
-    "studioAlt": "Musician working in a recording space",
-    "guitarAlt": "Close view of a guitar being played",
-    "liveAlt": "Live music performance under red light"
+    "title": "TODO: Replace with approved biography",
+    "intro": "Santiago Lo Bianco's biography has not yet been approved for publication."
   },
   "Album": {
-    "eyebrow": "The debut album",
-    "title": "Ten songs. One passage through fire.",
-    "intro": "Cielo Rojo follows a path from first light through loss, collapse, and rebirth.",
+    "eyebrow": "The album",
+    "title": "Cielo Rojo — eleven tracks",
+    "intro": "An album about time, memory, distance, and what changes when we look back.",
     "tracklist": "Tracklist",
     "track": "Track",
     "duration": "Time",
     "lyrics": "Lyrics",
     "openLyrics": "Read lyrics for {title}",
     "playerTitle": "Listen",
-    "playerUnavailable": "The streaming player will arrive with the official master release.",
-    "concept": "Concept record",
-    "release": "Independent release",
-    "year": "2026",
+    "playerUnavailable": "Streaming links will be added when released.",
     "backToAlbum": "Back to the album",
-    "lyricsHeading": "Lyrics and track notes",
+    "lyricsHeading": "Lyrics",
+    "echoLabel": "Echo",
     "coverAlt": "Cielo Rojo album cover",
-    "lyricsMetadataTitle": "{title} Lyrics",
-    "lyricsMetadataDescription": "Read the lyrics and track notes for {title} by Cielo Rojo."
+    "backCoverHeading": "Back cover",
+    "backCoverAlt": "Cielo Rojo album back cover",
+    "lyricsMetadataTitle": "{title} — Lyrics",
+    "lyricsMetadataDescription": "Lyrics and details for {title}, from Cielo Rojo by Santiago Lo Bianco."
   },
   "Tour": {
-    "eyebrow": "On the road",
-    "title": "Meet us where the volume lives.",
-    "intro": "A first run of intimate rooms across Mexico, the United States, and Spain.",
+    "eyebrow": "Live",
+    "title": "Cielo Rojo World Tour 2027",
+    "intro": "15 cities. 10 countries. One journey.",
     "all": "All dates",
     "upcoming": "Upcoming",
     "past": "Past",
     "filterLabel": "Filter tour dates",
-    "empty": "No dates in this view.",
+    "empty": "No dates yet — check back soon.",
     "venueTba": "Venue to be announced"
   },
   "Merch": {
-    "eyebrow": "Official goods",
-    "title": "Wear the record out into the world.",
-    "intro": "Prototype collection. Final artwork, inventory, and store links will be added before launch.",
-    "shopNotice": "Store preview",
-    "shopNoticeBody": "Checkout is intentionally disabled until a fulfillment partner is selected.",
+    "eyebrow": "Merch",
+    "title": "Cielo Rojo merch",
+    "intro": "Official merchandise to time travel",
     "price": "${price} USD"
   },
   "News": {
-    "eyebrow": "News and field notes",
-    "title": "Signals from Cielo Rojo.",
-    "intro": "Release updates, live announcements, and stories from behind the record.",
+    "eyebrow": "News",
+    "title": "News",
+    "intro": "No news has been published yet.",
     "published": "Published {date}",
-    "latest": "Latest story",
-    "backToNews": "Back to all news"
+    "latest": "Latest",
+    "backToNews": "Back to all news",
+    "empty": "No news yet — check back soon."
   },
   "Contact": {
     "eyebrow": "Contact",
-    "title": "Start a conversation.",
-    "intro": "For press, booking, licensing, or collaboration inquiries, leave a note below.",
+    "title": "Get in touch",
+    "intro": "For press, booking, or collaboration inquiries, leave a note below.",
     "name": "Name",
     "email": "Email",
     "subject": "Subject",
@@ -168,9 +154,9 @@
     "demoNotice": "This prototype form does not send email yet.",
     "success": "Your demo message is ready. The live form will connect before launch.",
     "press": "Press and booking",
+    "pressUnavailable": "Contact details are not yet available.",
     "social": "Find Cielo Rojo",
-    "pressEmail": "press@cielorojo.example",
-    "emailNote": "Placeholder address for the prototype"
+    "socialEmpty": "Social links are not yet available."
   },
   "DesignSystem": {
     "eyebrow": "Internal reference",
@@ -180,9 +166,11 @@
     "type": "Typography",
     "controls": "Controls",
     "surfaces": "Surfaces",
-    "displaySample": "A red sky leaves no witnesses",
-    "bodySample": "Built for long-form stories, lyrics, dates, and the small details around a record.",
+    "displaySample": "Cielo Rojo — Display type",
+    "bodySample": "A neutral preview of readable body copy for the website design system.",
     "primary": "Primary action",
-    "secondary": "Secondary action"
+    "secondary": "Secondary action",
+    "placeholder": "Placeholder",
+    "surfaceTitle": "Content preview"
   }
 }

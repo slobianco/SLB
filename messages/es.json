@@ -15,31 +15,31 @@
   "Metadata": {
     "home": {
       "title": "Cielo Rojo — Sitio Oficial",
-      "description": "Entra al mundo de Cielo Rojo: música, letras, fechas de gira, historias y artículos oficiales."
+      "description": "El sitio oficial de Cielo Rojo, un álbum de Santiago Lo Bianco."
     },
     "biography": {
       "title": "La Historia",
-      "description": "Conoce la historia de Cielo Rojo y el proceso solista que dio forma al álbum debut."
+      "description": "Sobre Santiago Lo Bianco, el artista detrás de Cielo Rojo."
     },
     "album": {
       "title": "Álbum y Letras",
-      "description": "Explora las diez canciones del álbum conceptual Cielo Rojo y sus letras bilingües."
+      "description": "Explora la lista de temas de Cielo Rojo, de Santiago Lo Bianco."
     },
     "tour": {
       "title": "Gira",
-      "description": "Consulta las próximas fechas y conciertos pasados de Cielo Rojo."
+      "description": "Fechas en vivo de Cielo Rojo."
     },
     "merch": {
       "title": "Artículos Oficiales",
-      "description": "Descubre la colección de ropa, vinilo y arte de Cielo Rojo."
+      "description": "Artículos de Cielo Rojo."
     },
     "news": {
       "title": "Noticias",
-      "description": "Novedades del lanzamiento, anuncios de gira e historias de estudio de Cielo Rojo."
+      "description": "Noticias y novedades de Cielo Rojo."
     },
     "contact": {
       "title": "Contacto",
-      "description": "Contacta a Cielo Rojo para prensa, contratación, licencias y colaboraciones."
+      "description": "Datos de contacto de Cielo Rojo."
     },
     "designSystem": {
       "title": "Sistema de Diseño",
@@ -56,11 +56,11 @@
     "spanish": "Español"
   },
   "Footer": {
-    "tagline": "Música pesada forjada bajo un cielo rojo sangre.",
+    "tagline": "El sitio oficial de Cielo Rojo, un álbum de Santiago Lo Bianco.",
     "explore": "Explora",
     "follow": "Sigue",
     "rights": "Todos los derechos reservados.",
-    "prototype": "Música independiente. Sin algoritmos en la sala."
+    "prototype": "Versión de prueba — el contenido se agrega progresivamente."
   },
   "Common": {
     "listen": "Escuchar ahora",
@@ -68,6 +68,7 @@
     "viewAll": "Ver todo",
     "details": "Detalles",
     "buy": "Ver articulo",
+    "addToCart": "Añadir al carrito",
     "tickets": "Boletos",
     "comingSoon": "Próximamente",
     "onSale": "A la venta",
@@ -77,89 +78,74 @@
     "placeholder": "Contenido de prototipo"
   },
   "Home": {
-    "eyebrow": "Comienza una nueva era",
+    "eyebrow": "Vista previa del sitio",
     "title": "Cielo Rojo",
-    "intro": "Una voz. Todos los instrumentos. Una década de fuego convertida en un solo disco.",
-    "primaryCta": "Entrar al álbum",
-    "secondaryCta": "Ver fechas de gira",
-    "featuredEyebrow": "Tema destacado",
-    "featuredTitle": "El cielo lo recuerda todo",
-    "featuredBody": "El tema principal pasa de un pulso solitario de guitarra de nylon a un muro de guitarras, siguiendo el instante en que el miedo se vuelve impulso.",
-    "newsEyebrow": "Transmisión",
-    "newsTitle": "Lo último del estudio",
-    "tourEyebrow": "Próximo ritual",
-    "tourTitle": "En vivo bajo el cielo rojo",
-    "heroAlt": "Público frente a un escenario iluminado",
-    "coverAlt": "Portada de Cielo Rojo con un sol rojo segmentado"
+    "intro": "Un álbum de Santiago Lo Bianco. Un viaje introspectivo a través del tiempo y la identidad, y la determinación de seguir adelante cuando todo ha cambiado.",
+    "primaryCta": "Explorar el álbum",
+    "secondaryCta": "Ver fechas en vivo",
+    "featuredEyebrow": "Del álbum",
+    "newsEyebrow": "Noticias",
+    "newsTitle": "Últimas novedades",
+    "tourEyebrow": "Fechas en vivo",
+    "tourTitle": "Próximos shows",
+    "heroAlt": "Santiago Lo Bianco en Roma",
+    "coverAlt": "Portada del álbum Cielo Rojo"
   },
   "Biography": {
     "eyebrow": "La historia",
-    "title": "Hecho a solas. Creado para escucharse juntos.",
-    "intro": "Cielo Rojo es el sonido de un músico que se negó a dejar incompleta cualquier parte de la visión.",
-    "factsTitle": "En breve",
-    "origin": "Origen",
-    "originValue": "Guadalajara, México",
-    "genre": "Sonido",
-    "genreValue": "Metal progresivo / folk latino",
-    "format": "Formato",
-    "formatValue": "Proyecto solista de estudio",
-    "galleryTitle": "Dentro del proceso",
-    "portraitAlt": "Vocalista actuando bajo las luces del escenario",
-    "studioAlt": "Músico trabajando en un espacio de grabación",
-    "guitarAlt": "Vista cercana de una guitarra en interpretación",
-    "liveAlt": "Presentación en vivo bajo luz roja"
+    "title": "TODO: Reemplazar con biografía aprobada",
+    "intro": "La biografía de Santiago Lo Bianco aún no ha sido aprobada para su publicación."
   },
   "Album": {
-    "eyebrow": "El álbum debut",
-    "title": "Diez canciones. Un viaje por el fuego.",
-    "intro": "Cielo Rojo sigue un camino desde la primera luz, a través de la pérdida y el colapso, hasta renacer.",
-    "tracklist": "Lista de canciones",
+    "eyebrow": "El álbum",
+    "title": "Cielo Rojo — once temas",
+    "intro": "Un álbum sobre el tiempo, la memoria, la distancia y lo que cambia al mirar atrás.",
+    "tracklist": "Lista de temas",
     "track": "Tema",
     "duration": "Tiempo",
-    "lyrics": "Letras",
+    "lyrics": "Letra",
     "openLyrics": "Leer la letra de {title}",
     "playerTitle": "Escuchar",
-    "playerUnavailable": "El reproductor llegará con el lanzamiento oficial del máster.",
-    "concept": "Álbum conceptual",
-    "release": "Lanzamiento independiente",
-    "year": "2026",
+    "playerUnavailable": "Los enlaces para escuchar se agregarán cuando estén disponibles.",
     "backToAlbum": "Volver al álbum",
-    "lyricsHeading": "Letra y notas del tema",
+    "lyricsHeading": "Letra",
+    "echoLabel": "Eco",
     "coverAlt": "Portada del álbum Cielo Rojo",
-    "lyricsMetadataTitle": "Letra de {title}",
-    "lyricsMetadataDescription": "Lee la letra y las notas de {title} de Cielo Rojo."
+    "backCoverHeading": "Contraportada",
+    "backCoverAlt": "Contraportada del álbum Cielo Rojo",
+    "lyricsMetadataTitle": "{title} — Letra",
+    "lyricsMetadataDescription": "Letra y detalles de {title}, del álbum Cielo Rojo de Santiago Lo Bianco."
   },
   "Tour": {
-    "eyebrow": "En el camino",
-    "title": "Nos vemos donde vive el volumen.",
-    "intro": "Una primera serie de salas íntimas por México, Estados Unidos y España.",
+    "eyebrow": "En vivo",
+    "title": "Cielo Rojo World Tour 2027",
+    "intro": "15 ciudades. 10 países. Un solo viaje.",
     "all": "Todas las fechas",
     "upcoming": "Próximas",
     "past": "Pasadas",
     "filterLabel": "Filtrar fechas de gira",
-    "empty": "No hay fechas en esta vista.",
+    "empty": "Todavía no hay fechas — vuelve pronto.",
     "venueTba": "Sala por anunciar"
   },
   "Merch": {
-    "eyebrow": "Artículos oficiales",
-    "title": "Lleva el disco al mundo.",
-    "intro": "Colección de prototipo. El arte final, inventario y enlaces de compra se agregarán antes del lanzamiento.",
-    "shopNotice": "Vista previa de tienda",
-    "shopNoticeBody": "La compra está desactivada hasta elegir un socio de distribución.",
+    "eyebrow": "Tienda",
+    "title": "Artículos de Cielo Rojo",
+    "intro": "Artículos oficiales para viajar en el tiempo",
     "price": "${price} USD"
   },
   "News": {
-    "eyebrow": "Noticias y notas de campo",
-    "title": "Señales de Cielo Rojo.",
-    "intro": "Novedades del lanzamiento, anuncios en vivo e historias detrás del disco.",
+    "eyebrow": "Noticias",
+    "title": "Noticias",
+    "intro": "Todavía no se ha publicado ninguna noticia.",
     "published": "Publicado el {date}",
-    "latest": "Historia reciente",
-    "backToNews": "Volver a todas las noticias"
+    "latest": "Reciente",
+    "backToNews": "Volver a todas las noticias",
+    "empty": "Todavía no hay noticias — vuelve pronto."
   },
   "Contact": {
     "eyebrow": "Contacto",
-    "title": "Inicia una conversación.",
-    "intro": "Para prensa, contratación, licencias o colaboraciones, deja una nota abajo.",
+    "title": "Ponte en contacto",
+    "intro": "Para prensa, contrataciones o colaboraciones, deja una nota abajo.",
     "name": "Nombre",
     "email": "Correo",
     "subject": "Asunto",
@@ -167,10 +153,10 @@
     "send": "Enviar mensaje",
     "demoNotice": "Este formulario de prototipo aún no envía correos.",
     "success": "Tu mensaje de prueba está listo. El formulario se conectará antes del lanzamiento.",
-    "press": "Prensa y contratación",
+    "press": "Prensa y contrataciones",
+    "pressUnavailable": "Los datos de contacto aún no están disponibles.",
     "social": "Encuentra a Cielo Rojo",
-    "pressEmail": "prensa@cielorojo.example",
-    "emailNote": "Dirección provisional para el prototipo"
+    "socialEmpty": "Los enlaces sociales aún no están disponibles."
   },
   "DesignSystem": {
     "eyebrow": "Referencia interna",
@@ -180,9 +166,11 @@
     "type": "Tipografía",
     "controls": "Controles",
     "surfaces": "Superficies",
-    "displaySample": "Un cielo rojo no deja testigos",
-    "bodySample": "Creado para historias, letras, fechas y los pequeños detalles alrededor de un disco.",
+    "displaySample": "Cielo Rojo — Tipografía de títulos",
+    "bodySample": "Una vista previa neutral de texto legible para el sistema de diseño del sitio.",
     "primary": "Accion principal",
-    "secondary": "Accion secundaria"
+    "secondary": "Accion secundaria",
+    "placeholder": "Placeholder",
+    "surfaceTitle": "Vista previa de contenido"
   }
 }

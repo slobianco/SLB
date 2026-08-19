@@ -29,7 +29,9 @@ export function getMerch(locale: Locale): MerchItem[] {
     return {
       id: requireString(record, 'id', context),
       name: requireLocalizedString(record.name, locale, `${context}.name`),
-      variant: requireLocalizedString(record.variant, locale, `${context}.variant`),
+      variant: record.variant
+        ? requireLocalizedString(record.variant, locale, `${context}.variant`)
+        : undefined,
       priceUsd: requireNumber(record, 'priceUsd', context),
       image: requireString(record, 'image', context),
       purchaseUrl: requireString(record, 'purchaseUrl', context),

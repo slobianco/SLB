@@ -7,6 +7,7 @@
     "tour": "Gira",
     "merch": "Tienda",
     "news": "Noticias",
+    "press": "Prensa",
     "contact": "Contacto",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",
@@ -36,6 +37,10 @@
     "news": {
       "title": "Noticias",
       "description": "Noticias y novedades de Cielo Rojo."
+    },
+    "press": {
+      "title": "Prensa",
+      "description": "Prensa, entrevistas y cobertura editorial de Cielo Rojo, de Santiago Lo Bianco."
     },
     "contact": {
       "title": "Contacto",
@@ -141,6 +146,23 @@
     "latest": "Reciente",
     "backToNews": "Volver a todas las noticias",
     "empty": "Todavía no hay noticias — vuelve pronto."
+  },
+  "Press": {
+    "eyebrow": "Prensa",
+    "title": "Historias detrás del cielo rojo",
+    "intro": "Conversaciones, adelantos y reflexiones en torno al lanzamiento de Cielo Rojo.",
+    "featuredLabel": "Entrevista destacada",
+    "readInterview": "Leer entrevista",
+    "backToPress": "Volver a Prensa",
+    "disclaimer": "Concepto editorial inspirado en el formato de una entrevista musical. Esto no es una entrevista o aval real.",
+    "aboutAlbum": "Sobre el álbum",
+    "empty": "Todavía no hay cobertura de prensa — vuelve pronto.",
+    "type": {
+      "interview": "Entrevista conceptual",
+      "review": "Reseña",
+      "feature": "Artículo",
+      "announcement": "Anuncio"
+    }
   },
   "Contact": {
     "eyebrow": "Contacto",

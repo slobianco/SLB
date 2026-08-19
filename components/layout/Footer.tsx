@@ -11,6 +11,7 @@ const footerLinks = [
   { href: '/tour', key: 'tour' },
   { href: '/merch', key: 'merch' },
   { href: '/news', key: 'news' },
+  { href: '/press', key: 'press' },
   { href: '/contact', key: 'contact' },
 ] as const;
 

@@ -88,6 +88,37 @@ coverImage: '/images/news/TODO-approved-image.jpg'
 
 Followed by the post body as Markdown.
 
+## Add a Press item
+
+Create `content/press/<slug>/en.mdx` and `content/press/<slug>/es.mdx` with frontmatter:
+
+```yaml
+---
+id: 'unique-stable-id'
+type: 'interview'
+title: 'TODO: Approved headline'
+summary: 'TODO: Approved one-paragraph summary'
+date: 'YYYY-MM-DD'
+publication: 'TODO: Real outlet name (omit entirely for prototype/concept content)'
+image: '/images/press/TODO-approved-image.jpg'
+isPrototype: true
+externalUrl: ''
+---
+```
+
+`type` is one of `interview`, `review`, `feature`, `announcement`. `publication`, `image`, and
+`externalUrl` are optional — omit them rather than inventing a name, photo, or link.
+
+For the article body, write plain Markdown. Pull quotes use standard blockquote syntax
+(`> Quote text`). For interviews, format each question as a `### Question text?` heading followed
+by the answer as a normal paragraph — the interview page styles these distinctly.
+
+`isPrototype` marks fictional/demo editorial content that has not been published by a real outlet
+— set it to `true` for placeholder/concept pieces (which also renders a visible disclaimer on the
+site) and omit it (or set `false`) once an item is genuine, approved press coverage. Never invent
+journalists, publications, URLs, quotes, review scores, endorsements, awards, or audience figures
+for a real-looking press item — use an explicit `TODO` instead.
+
 ## Update social links
 
 Edit `content/social-links.json`:

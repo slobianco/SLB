@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import type { Locale } from '../i18n/routing';
 
 export type MetadataPage =
-  'home' | 'biography' | 'album' | 'tour' | 'merch' | 'news' | 'contact' | 'designSystem';
+  'home' | 'biography' | 'album' | 'tour' | 'merch' | 'news' | 'press' | 'contact' | 'designSystem';
 
 export async function getPageMetadata(
   locale: Locale,

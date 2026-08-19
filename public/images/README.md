@@ -17,6 +17,9 @@ The news images reuse the relevant prototype photography above.
 `hero-stage.png` is a real supplied photo (Santiago in Rome), replacing the earlier Unsplash
 placeholder.
 
+`press/santiago-lo-bianco-interview.jpg` is a real supplied photo (Santiago at his home studio),
+used as the cover image for the press interview.
+
 ## Album artwork
 
 `album/cielo-rojo-cover.png` (front cover) and `album/cielo-rojo-back-cover.png` (back cover) are

@@ -59,6 +59,24 @@ export type NewsPost = {
   content: string;
 };
 
+export type PressItemType = 'interview' | 'review' | 'feature' | 'announcement';
+
+export type PressItem = {
+  id: string;
+  slug: string;
+  type: PressItemType;
+  title: string;
+  summary: string;
+  date: string;
+  publication?: string;
+  /** Optional hero image; omit rather than inventing stock photography when none is supplied. */
+  image?: string;
+  content: string;
+  /** True for fictional/demo editorial content — see docs/CONTENT-GUIDE.md. Never treat as real coverage. */
+  isPrototype?: boolean;
+  externalUrl?: string;
+};
+
 export type BioContent = {
   title: string;
   updatedAt: string;

@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { getBio } from './getBio';
 import { getMerch } from './getMerch';
 import { getNews, getNewsPost } from './getNews';
+import { getPressItem, getPressItems } from './getPress';
 import { getSocialLinks } from './getSocialLinks';
 import { getSong, getSongs } from './getSongs';
 import { getTourDates } from './getTourDates';
@@ -37,6 +38,14 @@ describe('file content accessors', () => {
     expect(getNews('en')).toHaveLength(0);
     expect(getNewsPost('en', 'any-slug')).toBeNull();
     expect(getNewsPost('en', '../../package')).toBeNull();
+  });
+
+  it('loads the prototype press interview and flags it as non-real coverage', () => {
+    const items = getPressItems('en');
+    expect(items).toHaveLength(1);
+    expect(items[0].isPrototype).toBe(true);
+    expect(getPressItem('en', 'santiago-lo-bianco-interview')?.type).toBe('interview');
+    expect(getPressItem('en', 'not-a-real-slug')).toBeNull();
   });
 
   it('loads the prototype tour dates in chronological order', () => {

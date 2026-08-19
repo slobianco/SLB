@@ -1,0 +1,106 @@
+.articleHeader {
+  padding-block: var(--space-7) var(--space-8);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.backLink:hover {
+  color: var(--color-accent-strong);
+}
+
+.backLink svg {
+  width: 1rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.meta time {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.metaDivider {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+}
+
+.articleHeader h1 {
+  max-width: 46rem;
+  margin-top: var(--space-5);
+  font-size: 3.2rem;
+}
+
+.articleHeader > div > p {
+  max-width: 46rem;
+  margin-top: var(--space-5);
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.disclaimer {
+  max-width: 46rem;
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-accent);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.cover {
+  position: relative;
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.cover img {
+  object-fit: cover;
+  /* Bias toward the top so the subject's face stays in frame on this wide crop. */
+  object-position: 50% 40%;
+}
+
+.articleBody {
+  padding-block: var(--space-8) var(--space-9);
+}
+
+.interviewBody :global(h3) {
+  margin-top: var(--space-7);
+  color: var(--color-accent-strong);
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.5rem;
+}
+
+.albumSection {
+  padding-block: 0 var(--space-10);
+}
+
+.albumSection h2 {
+  margin-bottom: var(--space-5);
+  font-size: 1.6rem;
+}
+
+@media (min-width: 48rem) {
+  .articleHeader h1 {
+    font-size: 4.4rem;
+  }
+
+  .articleHeader > div > p {
+    font-size: 1.25rem;
+  }
+}

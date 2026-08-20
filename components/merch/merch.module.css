@@ -58,3 +58,25 @@
   font-family: var(--font-display), sans-serif;
   font-size: 1.3rem;
 }
+
+@media (min-width: 48rem) {
+  .featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
+  }
+
+  .featured .imageWrap {
+    aspect-ratio: auto;
+    min-height: 22rem;
+  }
+
+  .featured .itemBody {
+    justify-content: center;
+    padding: var(--space-7);
+  }
+
+  .featured .itemBody h2 {
+    font-size: 2.2rem;
+  }
+}

@@ -13,10 +13,20 @@ export function MerchGrid({ items, locale }: { items: MerchItem[]; locale: Local
 
   return (
     <div className={styles.grid}>
-      {items.map((item) => (
-        <Card key={item.id} className={styles.item}>
+      {items.map((item, index) => (
+        <Card
+          key={item.id}
+          className={`${styles.item} ${index === 0 ? styles.featured : ''}`.trim()}
+        >
           <div className={styles.imageWrap}>
-            <Image src={item.image} alt={item.name} fill sizes="(max-width: 48rem) 100vw, 33vw" />
+            <Image
+              src={item.image}
+              alt={item.name}
+              fill
+              sizes={
+                index === 0 ? '(max-width: 48rem) 100vw, 66vw' : '(max-width: 48rem) 100vw, 33vw'
+              }
+            />
           </div>
           <div className={styles.itemBody}>
             <Badge>{item.category}</Badge>

@@ -94,7 +94,19 @@
     "tourEyebrow": "Live dates",
     "tourTitle": "Upcoming shows",
     "heroAlt": "Santiago Lo Bianco in Rome",
-    "coverAlt": "Cielo Rojo album cover"
+    "coverAlt": "Cielo Rojo album cover",
+    "heroPrevious": "Previous slide",
+    "heroNext": "Next slide",
+    "heroGoToSlide": "Go to slide {number}",
+    "hero2Eyebrow": "Behind the album",
+    "hero2Title": "In the studio",
+    "hero2Intro": "A closer look at how Cielo Rojo came together, one take at a time.",
+    "hero2Cta": "Read the interview",
+    "hero2Alt": "Santiago Lo Bianco at his home studio",
+    "spotlightEyebrow": "In his words",
+    "spotlightQuote": "Finishing it already means something. Anything beyond that is where the listener takes over.",
+    "spotlightAttribution": "Santiago Lo Bianco",
+    "spotlightCta": "Read the full interview"
   },
   "Biography": {
     "eyebrow": "The story",

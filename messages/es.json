@@ -94,7 +94,19 @@
     "tourEyebrow": "Fechas en vivo",
     "tourTitle": "Próximos shows",
     "heroAlt": "Santiago Lo Bianco en Roma",
-    "coverAlt": "Portada del álbum Cielo Rojo"
+    "coverAlt": "Portada del álbum Cielo Rojo",
+    "heroPrevious": "Diapositiva anterior",
+    "heroNext": "Siguiente diapositiva",
+    "heroGoToSlide": "Ir a la diapositiva {number}",
+    "hero2Eyebrow": "Detrás del álbum",
+    "hero2Title": "En el estudio",
+    "hero2Intro": "Una mirada más cercana a cómo se hizo Cielo Rojo, toma a toma.",
+    "hero2Cta": "Leer la entrevista",
+    "hero2Alt": "Santiago Lo Bianco en su estudio casero",
+    "spotlightEyebrow": "En sus palabras",
+    "spotlightQuote": "Finishing it already means something. Anything beyond that is where the listener takes over.",
+    "spotlightAttribution": "Santiago Lo Bianco",
+    "spotlightCta": "Leer la entrevista completa"
   },
   "Biography": {
     "eyebrow": "La historia",

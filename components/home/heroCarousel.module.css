@@ -30,7 +30,10 @@
 }
 
 .kenBurns {
-  animation: kenBurns 20s ease-in-out infinite alternate;
+  /* ease-out front-loads the motion and a 10s duration keeps most of the zoom within the
+     7s auto-advance window \u2014 each slide remounts (and restarts this animation) before a
+     slower/longer cycle would ever become visibly noticeable. */
+  animation: kenBurns 10s ease-out infinite alternate;
 }
 
 @keyframes kenBurns {
@@ -39,7 +42,7 @@
   }
 
   to {
-    transform: scale(1.1);
+    transform: scale(1.12);
   }
 }
 

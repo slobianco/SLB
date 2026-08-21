@@ -73,7 +73,14 @@ export function HeroCarousel({
       >
         {/* Only one slide is ever mounted at a time, so it must always load eagerly —
             a non-active slide's <img> would never become visible to trigger lazy-loading. */}
-        <Image src={slide.image} alt={slide.alt} fill priority sizes="100vw" />
+        <Image
+          src={slide.image}
+          alt={slide.alt}
+          fill
+          priority
+          sizes="100vw"
+          className={styles.kenBurns}
+        />
         <div className={styles.heroOverlay} />
         <Container className={styles.heroContent}>
           <p className={styles.eyebrow}>{slide.eyebrow}</p>

@@ -1,0 +1,41 @@
+{
+  // Auto-approve the safe, repetitive commands this project's dev workflow relies on,
+  // so routine actions (npm scripts, git status checks, reading command output) don't
+  // need a manual "Allow" click every time. Destructive or hard-to-reverse operations
+  // (push, force-reset, branch deletion, file deletion) are explicitly left gated below,
+  // even though some are technically valid git/PowerShell subcommands.
+  "chat.tools.terminal.autoApprove": {
+    // npm scripts (build/test/lint/typecheck/dev/start) and dependency installs
+    "/^npm (run|install|ci)\\b/": true,
+
+    // Read-only / informational git commands
+    "/^git (status|log|branch|diff|show|rev-parse)\\b/": true,
+
+    // Local, reversible git changes (commits stay local until an explicit push)
+    "/^git (add|commit)\\b/": true,
+
+    // PowerShell utilities used constantly to run and inspect dev commands
+    "Set-Location": true,
+    "Start-Sleep": true,
+    "Get-Content": true,
+    "Set-Content": true,
+    "Select-String": true,
+    "Test-Path": true,
+    "Get-Process": true,
+    "Get-ChildItem": true,
+    "Out-File": true,
+    "Measure-Object": true,
+    "Select-Object": true,
+
+    // Restarting the local dev server (killing node processes this project starts)
+    "Stop-Process": true,
+
+    // Never auto-approve these, regardless of the rules above
+    "/^git push\\b/": false,
+    "/^git (reset|clean)\\b.*(--hard|--force|-f)\\b/": false,
+    "/^git branch -D\\b/": false,
+    "Remove-Item": false,
+    "rm": false,
+    "del": false
+  }
+}

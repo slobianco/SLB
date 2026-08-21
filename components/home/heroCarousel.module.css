@@ -29,6 +29,20 @@
   object-position: center;
 }
 
+.kenBurns {
+  animation: kenBurns 20s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
 .heroOverlay {
   position: absolute;
   inset: 0;
@@ -147,6 +161,10 @@
 
 @media (prefers-reduced-motion: reduce) {
   .slide {
+    animation: none;
+  }
+
+  .kenBurns {
     animation: none;
   }
 }

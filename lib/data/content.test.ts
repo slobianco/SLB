@@ -13,6 +13,19 @@ describe('file content accessors', () => {
 
     expect(songs).toHaveLength(11);
     expect(songs.map((song) => song.trackNumber)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+    expect(songs.map((song) => song.title)).toEqual([
+      'Silent Memory',
+      'Review Yourself',
+      'Your Ghost In Me',
+      'London Darkened Roads',
+      'Cielo Rojo',
+      'The Quest',
+      'This Is Not Me',
+      'Raining in Sydney',
+      'There Is No Time',
+      'La Desolación',
+      'Ansiedad',
+    ]);
     expect(songs.every((song) => song.content.length > 0)).toBe(true);
   });
 
@@ -47,18 +60,12 @@ describe('file content accessors', () => {
     expect(getPressItem('en', 'not-a-real-slug')).toBeNull();
   });
 
-  it('loads the prototype tour dates in chronological order', () => {
-    const dates = getTourDates();
-    expect(dates).toHaveLength(15);
-    expect(dates.every((date) => date.isPrototype === true)).toBe(true);
-    expect(dates.every((date) => date.ticketUrl === '')).toBe(true);
-    expect(dates[0].date).toBe('2027-01-23');
-    expect(dates[dates.length - 1].date).toBe('2027-09-18');
+  it('has no tour dates until real dates are approved', () => {
+    expect(getTourDates()).toHaveLength(0);
   });
 
-  it('loads the real merch catalog', () => {
-    expect(getMerch('en')).toHaveLength(8);
-    expect(getMerch('en').every((item) => item.image.startsWith('/images/merch/'))).toBe(true);
+  it('has no merchandise until real products are approved', () => {
+    expect(getMerch('en')).toHaveLength(0);
   });
 
   it('has no social links until approved', () => {

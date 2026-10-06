@@ -1,4 +1,4 @@
-import { ChevronLeft, Quote } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronLeft, Quote } from 'lucide-react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -47,6 +47,10 @@ export default async function TrackPage({ params }: TrackPageProps) {
 
   setRequestLocale(locale);
   const translations = await getTranslations({ locale, namespace: 'Album' });
+  const songs = getSongs(locale);
+  const songIndex = songs.findIndex((item) => item.slug === song.slug);
+  const previousSong = songIndex > 0 ? songs[songIndex - 1] : null;
+  const nextSong = songIndex < songs.length - 1 ? songs[songIndex + 1] : null;
 
   return (
     <main id="main-content">
@@ -82,6 +86,41 @@ export default async function TrackPage({ params }: TrackPageProps) {
           </aside>
         </Container>
       </section>
+      <nav className={styles.chapterNav} aria-label={translations('chapterNavigation')}>
+        <Container className={styles.chapterNavInner}>
+          {previousSong ? (
+            <Link className={styles.chapterLink} href={`/album/${previousSong.slug}`}>
+              <ArrowLeft aria-hidden="true" />
+              <span>
+                <small>{translations('previousTrack')}</small>
+                <strong>{previousSong.title}</strong>
+              </span>
+            </Link>
+          ) : (
+            <span />
+          )}
+          {nextSong ? (
+            <Link
+              className={`${styles.chapterLink} ${styles.chapterLinkNext}`}
+              href={`/album/${nextSong.slug}`}
+            >
+              <span>
+                <small>{translations('nextTrack')}</small>
+                <strong>{nextSong.title}</strong>
+              </span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          ) : (
+            <Link className={`${styles.chapterLink} ${styles.chapterLinkNext}`} href="/album">
+              <span>
+                <small>{translations('journeyComplete')}</small>
+                <strong>{translations('returnToTracklist')}</strong>
+              </span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          )}
+        </Container>
+      </nav>
     </main>
   );
 }

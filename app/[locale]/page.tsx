@@ -1,14 +1,12 @@
-import { ArrowRight, CalendarDays, Disc3 } from 'lucide-react';
+import { ArrowDown, ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ClockMotif } from '@/components/home/ClockMotif';
-import { HeroCarousel, type HeroSlide } from '@/components/home/HeroCarousel';
-import { NewsCard } from '@/components/news/NewsCard';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
-import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { getNews, getSongs, getTourDates } from '@/lib/data';
+import { Link } from '@/i18n/navigation';
+import { album, getSongs } from '@/lib/data';
 import { formatDate } from '@/lib/format';
 import { getLocale } from '@/lib/i18n/locale';
 import { getPageMetadata } from '@/lib/metadata';
@@ -20,157 +18,137 @@ type HomePageProps = {
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
   const locale = await getLocale(params);
-  return getPageMetadata(locale, 'home', '/', '/images/hero-stage.png');
+  return getPageMetadata(locale, 'home', '/', album.coverImage);
 }
 
 export default async function HomePage({ params }: HomePageProps) {
   const locale = await getLocale(params);
   setRequestLocale(locale);
   const translations = await getTranslations({ locale, namespace: 'Home' });
-  const common = await getTranslations({ locale, namespace: 'Common' });
   const songs = getSongs(locale);
-  const news = getNews(locale).slice(0, 2);
-  const nextDate = getTourDates().find((date) => date.status !== 'past');
-  const featuredSong = songs.find((song) => song.slug === 'silent-memory') ?? songs[0];
+  const firstSong = songs[0];
+  const releaseDate = formatDate(album.releaseDate, locale, {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
 
   return (
-    <main id="main-content">
-      <HeroCarousel
-        slides={
-          [
-            {
-              image: '/images/hero-stage.png',
-              alt: translations('heroAlt'),
-              eyebrow: translations('eyebrow'),
-              title: translations('title'),
-              intro: translations('intro'),
-              ctas: [
-                {
-                  href: '/album',
-                  label: translations('primaryCta'),
-                  icon: <Disc3 aria-hidden="true" />,
-                },
-                {
-                  href: '/tour',
-                  label: translations('secondaryCta'),
-                  icon: <CalendarDays aria-hidden="true" />,
-                  variant: 'secondary',
-                },
-              ],
-            },
-            {
-              image: '/images/press/santiago-lo-bianco-interview.jpg',
-              alt: translations('hero2Alt'),
-              eyebrow: translations('hero2Eyebrow'),
-              title: translations('hero2Title'),
-              intro: translations('hero2Intro'),
-              ctas: [
-                {
-                  href: '/press/santiago-lo-bianco-interview',
-                  label: translations('hero2Cta'),
-                  icon: <ArrowRight aria-hidden="true" />,
-                },
-              ],
-            },
-          ] satisfies HeroSlide[]
-        }
-        previousLabel={translations('heroPrevious')}
-        nextLabel={translations('heroNext')}
-        slideLabels={[
-          translations('heroGoToSlide', { number: 1 }),
-          translations('heroGoToSlide', { number: 2 }),
-        ]}
-      />
-
-      <ScrollReveal>
-        <section className={styles.featuredSection}>
-          <Container className={styles.featuredGrid}>
-            <div className={styles.coverWrap}>
-              <Image
-                src={featuredSong.image ?? '/images/album/cielo-rojo-cover.png'}
-                alt={featuredSong.image ? featuredSong.title : translations('coverAlt')}
-                width={1200}
-                height={1200}
-                sizes="(max-width: 48rem) 100vw, 45vw"
-              />
-            </div>
-            <div className={styles.featuredCopy}>
-              <p className={styles.eyebrow}>{translations('featuredEyebrow')}</p>
-              <h2>{featuredSong.title}</h2>
-              <p>{featuredSong.echo}</p>
-              <div className={styles.trackMeta}>
-                <span>{String(featuredSong.trackNumber).padStart(2, '0')}</span>
-                <strong>{featuredSong.title}</strong>
-                {featuredSong.duration ? <span>{featuredSong.duration}</span> : null}
+    <main id="main-content" className={styles.home}>
+      <section className={styles.hero} aria-labelledby="home-title">
+        <Image
+          src={album.coverImage}
+          alt={translations('coverAlt')}
+          fill
+          priority
+          sizes="100vw"
+          className={styles.heroArtwork}
+        />
+        <div className={styles.heroVeil} />
+        <Container className={styles.heroInner}>
+          <div className={styles.heroMeta} aria-hidden="true">
+            <span>SLB / CR</span>
+            <span>01—11</span>
+          </div>
+          <div className={styles.heroCopy}>
+            <p className={styles.eyebrow}>{translations('artist')}</p>
+            <h1 id="home-title">
+              <span>Cielo</span>
+              <span>Rojo</span>
+            </h1>
+            <div className={styles.heroDetails}>
+              <p>{translations('intro')}</p>
+              <div className={styles.releaseMeta}>
+                <span>{translations('releaseLabel')}</span>
+                <time dateTime={album.releaseDate}>{releaseDate}</time>
               </div>
-              <Button href={`/album/${featuredSong.slug}`}>
-                {common('listen')}
-                <ArrowRight aria-hidden="true" />
-              </Button>
-            </div>
-          </Container>
-        </section>
-      </ScrollReveal>
-
-      <ScrollReveal>
-        <section className={styles.spotlightSection}>
-          <Container narrow className={styles.spotlightInner}>
-            <p className={styles.eyebrow}>{translations('spotlightEyebrow')}</p>
-            <blockquote className={styles.spotlightQuote}>
-              <p>{translations('spotlightQuote')}</p>
-              <cite>{translations('spotlightAttribution')}</cite>
-            </blockquote>
-            <Button href="/press/santiago-lo-bianco-interview" variant="ghost">
-              {translations('spotlightCta')} <ArrowRight aria-hidden="true" />
-            </Button>
-          </Container>
-        </section>
-      </ScrollReveal>
-
-      {news.length > 0 ? (
-        <ScrollReveal>
-          <section className={styles.newsSection}>
-            <Container>
-              <div className={styles.sectionHeader}>
-                <div>
-                  <p className={styles.eyebrow}>{translations('newsEyebrow')}</p>
-                  <h2>{translations('newsTitle')}</h2>
-                </div>
-                <Button href="/news" variant="ghost">
-                  {common('viewAll')} <ArrowRight aria-hidden="true" />
+              <div className={styles.heroActions}>
+                <Button href={`/album/${firstSong.slug}`}>
+                  {translations('beginCta')} <ArrowRight aria-hidden="true" />
+                </Button>
+                <Button href="/album" variant="secondary">
+                  {translations('tracklistCta')}
                 </Button>
               </div>
-              <div className={styles.newsGrid}>
-                {news.map((post) => (
-                  <NewsCard key={post.slug} post={post} locale={locale} />
-                ))}
-              </div>
-            </Container>
-          </section>
-        </ScrollReveal>
-      ) : null}
+            </div>
+          </div>
+          <a className={styles.scrollCue} href="#journey">
+            {translations('scrollCta')} <ArrowDown aria-hidden="true" />
+          </a>
+        </Container>
+      </section>
 
-      {nextDate ? (
-        <ScrollReveal>
-          <section className={styles.tourCallout}>
-            <ClockMotif className={styles.tourMotif} />
-            <Container className={styles.tourInner}>
-              <div>
-                <p className={styles.eyebrow}>{translations('tourEyebrow')}</p>
-                <h2>{translations('tourTitle')}</h2>
-              </div>
-              <div className={styles.nextDate}>
-                <time dateTime={nextDate.date}>{formatDate(nextDate.date, locale)}</time>
-                <strong>{nextDate.city}</strong>
-                <span>{nextDate.venue}</span>
-              </div>
-              <Button href="/tour" variant="secondary">
-                {common('details')} <ArrowRight aria-hidden="true" />
-              </Button>
-            </Container>
-          </section>
-        </ScrollReveal>
-      ) : null}
+      <section className={styles.prologue}>
+        <ClockMotif className={styles.prologueClock} />
+        <Container className={styles.prologueGrid}>
+          <p className={styles.chapterLabel}>00 / {translations('journeyEyebrow')}</p>
+          <div>
+            <h2>{translations('journeyTitle')}</h2>
+            <p>{translations('journeyIntro')}</p>
+          </div>
+        </Container>
+      </section>
+
+      <section id="journey" className={styles.journey}>
+        <Container>
+          <header className={styles.journeyHeader}>
+            <p className={styles.chapterLabel}>01—11 / {translations('tracksEyebrow')}</p>
+            <h2>{translations('tracksTitle')}</h2>
+          </header>
+          <ol className={styles.trackJourney}>
+            {songs.map((song) => (
+              <li key={song.slug}>
+                <Link
+                  href={`/album/${song.slug}`}
+                  aria-label={translations('openTrack', { title: song.title })}
+                >
+                  <span className={styles.trackNumber}>
+                    {String(song.trackNumber).padStart(2, '0')}
+                  </span>
+                  <span className={styles.trackIdentity}>
+                    <strong>{song.title}</strong>
+                    {song.echo ? <span>{song.echo}</span> : null}
+                  </span>
+                  <span className={styles.trackTick} aria-hidden="true" />
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </Container>
+      </section>
+
+      <section className={styles.firstEcho} aria-labelledby="first-echo-title">
+        <Image
+          src={firstSong.image ?? album.coverImage}
+          alt=""
+          fill
+          sizes="100vw"
+          className={styles.echoArtwork}
+        />
+        <div className={styles.echoVeil} />
+        <Container className={styles.echoInner}>
+          <p className={styles.chapterLabel}>01 / {translations('featuredEyebrow')}</p>
+          <h2 id="first-echo-title">{firstSong.title}</h2>
+          {firstSong.echo ? <blockquote>{firstSong.echo}</blockquote> : null}
+          <Button href={`/album/${firstSong.slug}`} variant="secondary">
+            {translations('featuredCta')} <ArrowRight aria-hidden="true" />
+          </Button>
+        </Container>
+      </section>
+
+      <section className={styles.release}>
+        <ClockMotif className={styles.releaseClock} />
+        <Container className={styles.releaseInner}>
+          <p className={styles.chapterLabel}>12 / {translations('releaseEyebrow')}</p>
+          <h2>{translations('releaseTitle')}</h2>
+          <time dateTime={album.releaseDate}>{releaseDate}</time>
+          <p>{translations('releaseBody')}</p>
+          <Button href="/album" variant="secondary">
+            {translations('albumCta')} <ArrowRight aria-hidden="true" />
+          </Button>
+        </Container>
+      </section>
     </main>
   );
 }

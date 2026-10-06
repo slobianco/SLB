@@ -1,3 +1,4 @@
+export { album } from './album';
 export { getBio } from './getBio';
 export { getMerch } from './getMerch';
 export { getNews, getNewsPost } from './getNews';

@@ -16,11 +16,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const storedTheme = window.localStorage.getItem('cielo-rojo-theme');
-    const preferredTheme: Theme = window.matchMedia('(prefers-color-scheme: light)').matches
-      ? 'light'
-      : 'dark';
-    const initialTheme =
-      storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : preferredTheme;
+    const initialTheme = storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : 'dark';
 
     setTheme(initialTheme);
     document.documentElement.dataset.theme = initialTheme;

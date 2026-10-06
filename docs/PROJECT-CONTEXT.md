@@ -82,25 +82,27 @@ assault," or "decade of fire" unless Santiago explicitly approves them.
 
 Cielo Rojo should sound like a human story, not a record-company press release.
 
-## 5. Album tracklist
+## 5. Album release and tracklist
 
-The current working final track order is:
+The album is scheduled for release on **25 December 2026**.
 
-1. La Desolación
-2. Ansiedad
-3. This Is Not Me
-4. There Is No Time
+The approved track order is:
+
+1. Silent Memory
+2. Review Yourself
+3. Your Ghost In Me
+4. London Darkened Roads
 5. Cielo Rojo
-6. Your Ghost In Me
-7. Review Yourself
-8. Silent Memory
-9. The Quest
-10. Raining in Sydney
-11. London Darkened Roads
+6. The Quest
+7. This Is Not Me
+8. Raining in Sydney
+9. There Is No Time
+10. La Desolación
+11. Ansiedad
 
-Confirmed 2026-08-18 against the official back-cover artwork, which superseded an earlier draft
-order. Treat this order as authoritative unless Santiago explicitly changes it again. Never
-silently reorder tracks.
+Confirmed by Santiago on 2026-10-05 against the newly supplied back-cover artwork. This supersedes
+the previous working order. Treat this order as authoritative unless Santiago explicitly changes
+it again. Never silently reorder tracks.
 
 ## 6. Lyrics, track meanings, and Echoes
 

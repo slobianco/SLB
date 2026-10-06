@@ -10,6 +10,11 @@ import styles from './merch.module.css';
 
 export function MerchGrid({ items, locale }: { items: MerchItem[]; locale: Locale }) {
   const common = useTranslations('Common');
+  const merch = useTranslations('Merch');
+
+  if (items.length === 0) {
+    return <p className={styles.empty}>{merch('empty')}</p>;
+  }
 
   return (
     <div className={styles.grid}>

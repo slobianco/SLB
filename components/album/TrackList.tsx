@@ -18,6 +18,7 @@ export function TrackList({ songs }: { songs: Song[] }) {
             <span className={styles.trackNumber}>{String(song.trackNumber).padStart(2, '0')}</span>
             <span className={styles.trackIdentity}>
               <strong>{song.title}</strong>
+              {song.echo ? <small>{song.echo}</small> : null}
             </span>
             {song.duration ? <span className={styles.duration}>{song.duration}</span> : null}
             <ArrowUpRight aria-hidden="true" />

@@ -4,6 +4,16 @@
   gap: var(--space-5);
 }
 
+.empty {
+  max-width: 38rem;
+  padding-block: var(--space-7);
+  color: var(--color-text-muted);
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 .item {
   display: flex;
   flex-direction: column;

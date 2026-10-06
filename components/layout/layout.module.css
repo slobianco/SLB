@@ -50,12 +50,6 @@
   color: var(--color-accent-strong);
 }
 
-.logoMark {
-  height: 2rem;
-  width: auto;
-  align-self: center;
-}
-
 .desktopNav {
   display: none;
   align-items: center;
@@ -304,6 +298,39 @@
 
   .menuButton,
   .mobileNav {
+    display: none;
+  }
+}
+
+@media (max-width: 30rem) {
+  .headerInner {
+    gap: var(--space-2);
+  }
+
+  .wordmark {
+    font-size: 1.25rem;
+  }
+
+  .headerControls {
+    gap: var(--space-1);
+  }
+
+  .iconButton {
+    width: 2.35rem;
+    height: 2.35rem;
+    flex-basis: 2.35rem;
+  }
+
+  .languageSwitcher {
+    height: 2.35rem;
+  }
+
+  .languageSwitcher button {
+    min-width: 1.7rem;
+    padding-inline: 0.25rem;
+  }
+
+  .themeButton {
     display: none;
   }
 }

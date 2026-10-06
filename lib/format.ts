@@ -7,14 +7,14 @@ export function formatDate(date: string, locale: Locale, options?: Intl.DateTime
     year: 'numeric',
   };
 
-  return new Intl.DateTimeFormat(locale === 'es' ? 'es-MX' : 'en-US', {
+  return new Intl.DateTimeFormat(locale === 'es' ? 'es-AR' : 'en-GB', {
     ...formatOptions,
     timeZone: 'UTC',
   }).format(new Date(`${date}T12:00:00Z`));
 }
 
 export function formatPrice(priceUsd: number, locale: Locale) {
-  return new Intl.NumberFormat(locale === 'es' ? 'es-MX' : 'en-US', {
+  return new Intl.NumberFormat(locale === 'es' ? 'es-AR' : 'en-GB', {
     style: 'currency',
     currency: 'USD',
     maximumFractionDigits: 0,

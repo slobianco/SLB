@@ -12,7 +12,7 @@ export function ThemeToggle() {
 
   return (
     <button
-      className={styles.iconButton}
+      className={`${styles.iconButton} ${styles.themeButton}`}
       type="button"
       onClick={toggleTheme}
       aria-label={label}

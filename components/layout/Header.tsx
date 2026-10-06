@@ -2,7 +2,6 @@
 
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -11,12 +10,8 @@ import styles from './layout.module.css';
 
 const navItems = [
   { href: '/', label: 'home' },
-  { href: '/biography', label: 'biography' },
   { href: '/album', label: 'album' },
-  { href: '/tour', label: 'tour' },
-  { href: '/merch', label: 'merch' },
-  { href: '/news', label: 'news' },
-  { href: '/press', label: 'press' },
+  { href: '/press/santiago-lo-bianco-interview', label: 'interview' },
   { href: '/contact', label: 'contact' },
 ] as const;
 
@@ -48,13 +43,6 @@ export function Header() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link className={styles.wordmark} href="/" aria-label="Cielo Rojo">
-            <Image
-              className={styles.logoMark}
-              src="/images/branding/slb-logo.png"
-              alt=""
-              width={80}
-              height={80}
-            />
             <span>Cielo</span> Rojo
           </Link>
 
@@ -71,8 +59,6 @@ export function Header() {
           </nav>
 
           <div className={styles.headerControls}>
-            <LanguageSwitcher />
-            <ThemeToggle />
             <button
               className={`${styles.iconButton} ${styles.menuButton}`}
               type="button"
@@ -83,6 +69,8 @@ export function Header() {
             >
               {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
             </button>
+            <LanguageSwitcher />
+            <ThemeToggle />
           </div>
         </div>
       </header>

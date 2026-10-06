@@ -1,6 +1,8 @@
 .trackHeader {
+  position: relative;
   padding-block: var(--space-7) var(--space-8);
-  background: var(--color-surface);
+  overflow: hidden;
+  background: radial-gradient(circle at 82% 20%, rgb(200 23 53 / 18%), transparent 32%), #0d0c0b;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -39,6 +41,69 @@
   max-width: 58rem;
   margin-top: var(--space-4);
   font-size: 4.2rem;
+}
+
+.chapterNav {
+  color: #f5f0e8;
+  background: #0d0c0b;
+  border-top: 1px solid rgb(245 240 232 / 16%);
+}
+
+.chapterNavInner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.chapterLink {
+  min-height: 9rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+  transition: background var(--transition-base);
+}
+
+.chapterLink:hover {
+  background: rgb(245 240 232 / 3%);
+}
+
+.chapterLink svg {
+  width: 1.25rem;
+  flex: 0 0 auto;
+  color: #ef3850;
+}
+
+.chapterLink span {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.chapterLink small {
+  color: rgb(245 240 232 / 46%);
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.chapterLink strong {
+  overflow: hidden;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.1rem, 2.4vw, 1.8rem);
+  line-height: 1;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.chapterLinkNext {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.chapterLinkNext span {
+  align-items: flex-end;
 }
 
 .trackHeader > div > p {
@@ -118,5 +183,23 @@
   .trackGrid aside {
     position: relative;
     top: auto;
+  }
+}
+
+@media (max-width: 34rem) {
+  .chapterNavInner {
+    grid-template-columns: 1fr;
+  }
+
+  .chapterNavInner > span:empty {
+    display: none;
+  }
+
+  .chapterLink {
+    min-height: 7rem;
+  }
+
+  .chapterLink + .chapterLink {
+    border-top: 1px solid rgb(245 240 232 / 12%);
   }
 }

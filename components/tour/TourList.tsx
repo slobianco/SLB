@@ -29,6 +29,10 @@ export function TourList({ dates }: { dates: TourDate[] }) {
     return true;
   });
 
+  if (dates.length === 0) {
+    return <p className={styles.empty}>{tour('empty')}</p>;
+  }
+
   return (
     <div>
       <div className={styles.filters} role="group" aria-label={tour('filterLabel')}>

@@ -29,8 +29,7 @@ const themeScript = `
   (function () {
     try {
       var storedTheme = localStorage.getItem('cielo-rojo-theme');
-      var systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-      document.documentElement.dataset.theme = storedTheme || systemTheme;
+      document.documentElement.dataset.theme = storedTheme || 'dark';
     } catch (_) {
       document.documentElement.dataset.theme = 'dark';
     }

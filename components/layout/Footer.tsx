@@ -1,17 +1,15 @@
 import { Camera, Disc3, Play, Radio, Users, Video, type LucideIcon } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Container } from '@/components/ui/Container';
-import { getSocialLinks, type SocialLink } from '@/lib/data';
+import type { Locale } from '@/i18n/routing';
+import { album, getSocialLinks, type SocialLink } from '@/lib/data';
+import { formatDate } from '@/lib/format';
 import styles from './layout.module.css';
 
 const footerLinks = [
-  { href: '/biography', key: 'biography' },
   { href: '/album', key: 'album' },
-  { href: '/tour', key: 'tour' },
-  { href: '/merch', key: 'merch' },
-  { href: '/news', key: 'news' },
-  { href: '/press', key: 'press' },
+  { href: '/press/santiago-lo-bianco-interview', key: 'interview' },
   { href: '/contact', key: 'contact' },
 ] as const;
 
@@ -27,7 +25,13 @@ const socialIcons: Record<SocialLink['platform'], LucideIcon> = {
 export function Footer() {
   const footer = useTranslations('Footer');
   const navigation = useTranslations('Navigation');
+  const locale = useLocale() as Locale;
   const socialLinks = getSocialLinks().filter((link) => link.url);
+  const releaseDate = formatDate(album.releaseDate, locale, {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
 
   return (
     <footer className={styles.footer}>
@@ -78,7 +82,9 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} Cielo Rojo. {footer('rights')}
           </p>
-          <p>{footer('prototype')}</p>
+          <p>
+            {footer('release')} <time dateTime={album.releaseDate}>{releaseDate}</time>
+          </p>
         </div>
       </Container>
     </footer>
